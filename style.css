@@ -1,0 +1,24 @@
+h1{
+    text-align: center;
+}
+body{
+    background-color: rgb(28, 28, 187);
+    color: white;
+}
+
+.carrinho{
+    text-align: right;
+}
+
+#altura{
+    width: 50px;
+    margin-left: 13px;
+}
+#largura{
+    width: 50px;
+    margin-left: 4px;
+}
+p{
+    margin-bottom: 8px;
+    margin-top: 7px;
+}
