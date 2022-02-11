@@ -44,8 +44,8 @@ p{
     color: black;
     width: 30%;
     margin: auto;
-    margin-bottom: 8px;
-    margin-top: 7px;
+    margin-bottom: 15px;
+    min-width: 400px;
 }
 
 .confirm{
