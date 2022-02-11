@@ -45,7 +45,7 @@ p{
     width: 30%;
     margin: auto;
     margin-bottom: 15px;
-    min-width: 400px;
+    min-width: 350px;
 }
 
 .confirm{
@@ -53,4 +53,6 @@ p{
     width: 31.5%;
     cursor: pointer;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.61);
+    margin: auto;
+
 }
