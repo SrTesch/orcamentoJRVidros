@@ -11,35 +11,33 @@
 <body>
     <main>
         <h1>Bem vindo à pagina de orçamentos da JRVidros!</h1>
-        <p>
-            Para começarmos, preciso que você me ajude!
-            <br>
-            
-            <input type="radio" name="tipoDeServ" value="padrao" id="padrao">
-            <label for="padrao">Padrão</label>
-            <input type="radio" name="tipoDeServ" value="box" id="box">
-            <label for="box">Box</label>
-            <input type="radio" name="tipoDeServ" value="eng" id="eng">
-            <label for="eng">Engenharia</label>
-        </p>
-        
-        <p>
-            A cor do vidro é incolor ou colorido? <br>
-            <input type="radio" name="cor" value="inc" id="incolor">
-            <label for="incolor">Incolor</label>
-            <input type="radio" name="cor" value="color" id="color">
-            <label for="color">Colorido</label>
-        </p>
-        <p>
-            Digite a altura:
-            <input type="number" name="altura" id="altura"> <br>
-            Digite a largura:
-            <input type="number" name="largura" id="largura"> <br>
-            <input type="button" value="Confirmar" onclick="medida()"><br>
-        </p>
-        <div id="teste">
-
-        </div>
+        <img src="logo.png" alt="logo da loja">
+                <p>
+                    Para começarmos, preciso que você me ajude!
+                    <br> <br>
+                    Qual é o tipo de medida?
+                    <br>
+                    <input type="radio" name="tipoDeServ" value="padrao" id="padrao" required>
+                    <label for="padrao">Padrão</label>
+                    <input type="radio" name="tipoDeServ" value="box" id="box">
+                    <label for="box">Box</label>
+                    <input type="radio" name="tipoDeServ" value="eng" id="eng" >
+                    <label for="eng">Engenharia</label>
+                    <br> <br>
+                    A cor do vidro é incolor ou colorido? <br>
+                    <input type="radio" name="cor" value="inc" id="incolor">
+                    <label for="incolor">Incolor</label>
+                    <input type="radio" name="cor" value="color" id="color">
+                    <label for="color">Colorido</label>
+                    <br> <br>
+                    Digite a altura:
+                    <input type="number" name="altura" id="altura" placeholder="cm"> <br>
+                    Digite a largura:
+                    <input type="number" name="largura" id="largura" placeholder="cm"> <br>
+                    <span id="teste">
+                    </span>
+                </p>
+                <input type="submit" value="Confirmar" onclick="medida()" class="confirm"><br>
     </main>
 </body>
 </html>

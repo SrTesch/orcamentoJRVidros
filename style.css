@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300&display=swap');
+
+*{
+    font-family: 'Rowdies', monospace;
+}
+
 h1{
     text-align: center;
 }
@@ -6,19 +12,45 @@ body{
     color: white;
 }
 
-.carrinho{
-    text-align: right;
-}
-
 #altura{
     width: 50px;
-    margin-left: 13px;
+    margin-left: 15px;
 }
 #largura{
     width: 50px;
     margin-left: 4px;
 }
+
+body{
+    text-align: center;
+    background-image: url(fundo.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+h1{
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.801);
+}
+
+span#teste{
+    margin-top: 12px;
+}
+
 p{
+    font-size: 22px;
+    background-color: white;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.603);
+    padding: 12px;
+    color: black;
+    width: 30%;
+    margin: auto;
     margin-bottom: 8px;
     margin-top: 7px;
+}
+
+.confirm{
+    font-size: 18px;
+    width: 31.5%;
+    cursor: pointer;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.61);
 }
