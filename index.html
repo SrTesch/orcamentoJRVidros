@@ -17,11 +17,13 @@
                     <br> <br>
                     Qual é o tipo de medida?
                     <br>
-                    <input type="radio" name="tipoDeServ" value="padrao" id="padrao" required>
+                    <input type="radio" name="tipoDeMed" value="padrao" id="padrao" required>
                     <label for="padrao">Padrão</label>
-                    <input type="radio" name="tipoDeServ" value="box" id="box">
-                    <label for="box">Box</label>
-                    <input type="radio" name="tipoDeServ" value="eng" id="eng" >
+                    
+                    <input type="radio" name="tipoDeMed" value="box" id="box">
+                    <label for="box">Box</label><br>
+
+                    <input type="radio" name="tipoDeMed" value="eng" id="eng" >
                     <label for="eng">Engenharia</label>
                     <br> <br>
                     A cor do vidro é incolor ou colorido? <br>
@@ -30,6 +32,25 @@
                     <input type="radio" name="cor" value="color" id="color">
                     <label for="color">Colorido</label>
                     <br> <br>
+                    Qual tipo de serviço? <br>
+                    <input type="radio" name="serv" id="j2f">
+                    <label for="j2f">Janela 2 folhas</label><br>
+
+                    <input type="radio" name="serv" id="j4f">
+                    <label for="j4f">Janela 4 folhas</label>
+                    <br>
+                    <input type="radio" name="serv" id="p2f">
+                    <label for="p2f">Porta 2 folhas</label>
+                    <br>
+                    <input type="radio" name="serv" id="p4f">
+                    <label for="p4f">Porta 4 folhas</label>
+                    <br>
+                    <input type="radio" name="serv" id="boxfront">
+                    <label for="boxfront">Box Frontal</label>
+                    <br>
+                    <input type="radio" name="serv" id="boxcanto">
+                    <label for="boxcanto">Box de Canto</label>
+                    <br><br>
                     Digite a altura:
                     <input type="number" name="altura" id="altura" placeholder="cm"> <br>
                     Digite a largura:
@@ -37,7 +58,7 @@
                     <span id="teste">
                     </span>
                 </p>
-                <input type="submit" value="Confirmar" onclick="medida()" class="confirm"><br>
+                <input type="submit" value="Confirmar" onclick="somaFinal()" class="confirm"><br>
     </main>
 </body>
 </html>
