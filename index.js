@@ -39,10 +39,10 @@ function medidaVidro() {
 
 function alum() { //calculo do preço dos alumínios
     let aux1 = document.getElementById('altura')
-    let alt = Number(aux1.value)
-    alt = alt * 0.01
     let aux2 = document.getElementById('largura')
+    let alt = Number(aux1.value)
     let larg = Number(aux2.value)
+    alt = alt * 0.01
     larg = larg * 0.01
     let tipoDeServ = document.getElementsByName('serv')
     let aux = ''
@@ -52,32 +52,32 @@ function alum() { //calculo do preço dos alumínios
     if(tipoDeServ[0].checked){
         aux = 'Janela 2 Folhas'
         alumAlt = alt * 15
-        alumLarg = (larg + 5)* 46
+        alumLarg = (larg + 0.05)* 46
         precoAlum = alumAlt + alumLarg + 20
     }else if(tipoDeServ[1].checked){
         aux = 'Janela 4 Folhas'
         alumAlt = alt * 25
-        alumLarg = (larg + 10) * 46
-        precoAlum = alumAlt + alumAlt + 32
+        alumLarg = (larg + 0.10) * 46
+        precoAlum = alumAlt + alumLarg + 32
     }else if(tipoDeServ[2].checked){
         aux = 'Porta 2 Folhas'
         alumAlt = alt * 15
-        alumLarg = (larg + 5)* 46
+        alumLarg = (larg + 0.05)* 46
         precoAlum = alumAlt + alumLarg + 60
     }else if(tipoDeServ[3].checked){
         aux = 'Porta 4 Folhas'
         alumAlt = alt * 25
-        alumLarg = (larg + 10) * 46
-        precoAlum = alumAlt + alumAlt + 80
+        alumLarg = (larg + 0.10) * 46
+        precoAlum = alumAlt + alumLarg + 80
     }else if(tipoDeServ[4].checked){
         aux = 'Box Frontal'
         alumAlt = alt * 13
-        alumLarg = (larg + 5) * 38
-        precoAlum = alumAlt + alumLarg +20
-    }else{
+        alumLarg = (larg + 0.05) * 38
+        precoAlum = alumAlt + alumLarg + 20
+    }else if(tipoDeServ[5].checked){
         aux = 'Box de Canto'
         alumAlt = alt * 15
-        alumLarg = (larg + 10) * 38
+        alumLarg = (larg + 0.10) * 38
         precoAlum = alumAlt + alumLarg + 35
     }
     return precoAlum
@@ -147,9 +147,14 @@ function puxador() {
 }
 
 function somaFinal() {
+    console.log(medidaVidro())
+    console.log(alum())
+    console.log(maoDeObra())
+    console.log(vinil())
+    console.log(puxador())
     let precoFinal = medidaVidro() + alum() + maoDeObra() + vinil() + puxador()
     let teste = document.getElementById('teste')
     let preçoCartão = precoFinal * 1.11
-    let preçoDinheiro = preçoCartão * 0.09
-    teste.innerHTML = `<br> Em até 12x sem juros no cartão<br> R$${preçoCartão.toFixed(2)} <br>A vista: R$${preçoDinheiro.toFixed(2)}`.replace(".", ",") 
+    let preçoDinheiro = preçoCartão * 0.91
+    teste.innerHTML = `<br> Em até 10x sem juros no cartão<br> R$${preçoCartão.toFixed(2)} <br>A vista: R$${preçoDinheiro.toFixed(2)}`.replace(".", ",") 
 }
