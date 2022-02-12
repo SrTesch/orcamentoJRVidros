@@ -49,26 +49,36 @@ function alum() { //calculo do preço dos alumínios
     let precoAlum
     let alumAlt
     let alumLarg
-    if(tipoDeServ[0].checked || tipoDeServ[2].checked){
-        aux = 'Janela 2 Folhas e Porta 2 Folhas'
+    if(tipoDeServ[0].checked){
+        aux = 'Janela 2 Folhas'
         alumAlt = alt * 15
         alumLarg = (larg + 5)* 46
-        precoAlum = alumAlt + alumAlt
-    }else if(tipoDeServ[1].checked || tipoDeServ[3].checked){
-        aux = 'Janela 4 Folhas ou Porta 4 Folhas'
+        precoAlum = alumAlt + alumLarg + 20
+    }else if(tipoDeServ[1].checked){
+        aux = 'Janela 4 Folhas'
         alumAlt = alt * 25
         alumLarg = (larg + 10) * 46
-        precoAlum = alumAlt + alumAlt
+        precoAlum = alumAlt + alumAlt + 32
+    }else if(tipoDeServ[2].checked){
+        aux = 'Porta 2 Folhas'
+        alumAlt = alt * 15
+        alumLarg = (larg + 5)* 46
+        precoAlum = alumAlt + alumLarg + 60
+    }else if(tipoDeServ[3].checked){
+        aux = 'Porta 4 Folhas'
+        alumAlt = alt * 25
+        alumLarg = (larg + 10) * 46
+        precoAlum = alumAlt + alumAlt + 80
     }else if(tipoDeServ[4].checked){
         aux = 'Box Frontal'
         alumAlt = alt * 13
         alumLarg = (larg + 5) * 38
-        precoAlum = alumAlt + alumAlt
+        precoAlum = alumAlt + alumLarg +20
     }else{
         aux = 'Box de Canto'
         alumAlt = alt * 15
         alumLarg = (larg + 10) * 38
-        precoAlum = alumAlt + alumAlt
+        precoAlum = alumAlt + alumLarg + 35
     }
     return precoAlum
 }
@@ -111,8 +121,8 @@ function vinil() {
     let aux2 = document.getElementById('largura')
     let alt = Number(aux1.value)
     let larg = Number(aux2.value)
-    alt = alt * 0.01
-    larg = larg * 0.01
+    alt = (alt + 5) * 0.01
+    larg = (larg + 5) * 0.01
     let vin = document.getElementsByName('vin')
     let precovin
     if(vin[0].checked){
@@ -139,5 +149,7 @@ function puxador() {
 function somaFinal() {
     let precoFinal = medidaVidro() + alum() + maoDeObra() + vinil() + puxador()
     let teste = document.getElementById('teste')
-    teste.innerHTML = `<br> O preço é R$${precoFinal.toFixed(2)}`.replace(".", ",")
+    let preçoCartão = precoFinal * 1.11
+    let preçoDinheiro = preçoCartão * 0.09
+    teste.innerHTML = `<br> Em até 12x sem juros no cartão<br> R$${preçoCartão.toFixed(2)} <br>A vista: R$${preçoDinheiro.toFixed(2)}`.replace(".", ",") 
 }
