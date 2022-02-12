@@ -37,7 +37,7 @@ function medidaVidro() {
     return precoVidro
 }
 
-function alum() {
+function alum() { //calculo do preço dos alumínios
     let aux1 = document.getElementById('altura')
     let alt = Number(aux1.value)
     alt = alt * 0.01
@@ -73,8 +73,71 @@ function alum() {
     return precoAlum
 }
 
+function maoDeObra(){ //calculo da mão de obra
+    let mo
+    let tipoDeServ = document.getElementsByName('serv')
+    let aux = ''
+    let qserv = document.getElementsByName('MO')
+    if(tipoDeServ[0].checked || tipoDeServ[1].checked || tipoDeServ[4].checked){
+        if(qserv[0].checked){
+            mo = 140
+        }else if(qserv[1].checked){
+            mo = 120
+        }else if(qserv[2].checked){
+            mo = 110
+        }else if(qserv[3].checked){
+            mo = 100
+        }else{
+            mo = 90
+        }
+    }else{
+        if(qserv[0].checked){
+            mo = 160
+        }else if(qserv[1].checked){
+            mo = 140
+        }else if(qserv[2].checked){
+            mo = 120
+        }else if(qserv[3].checked){
+            mo = 110
+        }else{
+            mo = 100
+        }
+    }
+    return mo
+}
+
+function vinil() {
+    let aux1 = document.getElementById('altura')
+    let aux2 = document.getElementById('largura')
+    let alt = Number(aux1.value)
+    let larg = Number(aux2.value)
+    alt = alt * 0.01
+    larg = larg * 0.01
+    let vin = document.getElementsByName('vin')
+    let precovin
+    if(vin[0].checked){
+        precovin = alt * larg * 60
+    }else{
+        precovin = 0
+    }
+    return precovin
+}
+
+function puxador() {
+    let pux = document.getElementsByName('pux')
+    let puxAux
+    if(pux[0].checked){
+        puxAux = 0
+    }else if(pux[1].checked){
+        puxAux = 30
+    }else{
+        puxAux = 60
+    }
+    return puxAux
+}
+
 function somaFinal() {
-    let precoFinal = medidaVidro() + alum()
+    let precoFinal = medidaVidro() + alum() + maoDeObra() + vinil() + puxador()
     let teste = document.getElementById('teste')
     teste.innerHTML = `<br> O preço é R$${precoFinal.toFixed(2)}`.replace(".", ",")
 }
