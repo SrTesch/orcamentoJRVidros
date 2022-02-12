@@ -56,3 +56,20 @@ p{
     margin: auto;
 
 }
+
+footer{
+    margin-top: 8px;
+}
+
+footer > a{
+    padding: 2px;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.788);
+    text-decoration: none;
+    color: white;
+    transition-duration: .5s;
+}
+
+footer > a:hover{
+    background-color: white;
+    color: #223F43;
+}
