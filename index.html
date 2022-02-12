@@ -13,9 +13,8 @@
         <h1>Bem vindo à pagina de orçamentos da JRVidros!</h1>
         <img src="logo.png" alt="logo da loja">
                 <p>
-                    Para começarmos, preciso que você me ajude!
                     <br> <br>
-                    Qual é o tipo de medida?
+                    Selecione o tipo de Medida:
                     <br>
                     <input type="radio" name="tipoDeMed" value="padrao" id="padrao" required>
                     <label for="padrao">Padrão</label>
@@ -26,13 +25,14 @@
                     <input type="radio" name="tipoDeMed" value="eng" id="eng" >
                     <label for="eng">Engenharia</label>
                     <br> <br>
-                    A cor do vidro é incolor ou colorido? <br>
+                    Selecione a cor do vidro: <br>
                     <input type="radio" name="cor" value="inc" id="incolor">
                     <label for="incolor">Incolor</label>
                     <input type="radio" name="cor" value="color" id="color">
                     <label for="color">Colorido</label>
                     <br> <br>
-                    Qual tipo de serviço? <br>
+                    <!--Escolhendo o tipo de serviço para definir qual kit de aluminio seria usado-->
+                    Selecione o tipo de Serviço <br>
                     <input type="radio" name="serv" id="j2f">
                     <label for="j2f">Janela 2 folhas</label><br>
 
@@ -51,10 +51,25 @@
                     <input type="radio" name="serv" id="boxcanto">
                     <label for="boxcanto">Box de Canto</label>
                     <br><br>
+                    <!--Aqui a altura e a largura serão definidos pra podermos trabalhar com o valor dos aluminios e vidro-->
                     Digite a altura:
                     <input type="number" name="altura" id="altura" placeholder="cm"> <br>
                     Digite a largura:
                     <input type="number" name="largura" id="largura" placeholder="cm"> <br>
+                    <br>
+                    <!--A partir daqui o codigo serve pra calcular a mão de obra-->
+                    Selecione a quantidade de serviços: <br>
+                    <input type="radio" class="but" name="MO" id="1s">
+                    <label for="1s">1</label>
+                    <input type="radio" class="but" name="MO" id="2s">
+                    <label for="2s">2</label>
+                    <input type="radio" class="but" name="MO" id="3s">
+                    <label for="3s">3</label>
+                    <input type="radio" class="but" name="MO" id="4s">
+                    <label for="4s">4</label>
+                    <input type="radio" class="but" name="MO" id="5s">
+                    <label for="5s">5 ou mais</label>
+                    <br>
                     <span id="teste">
                     </span>
                 </p>

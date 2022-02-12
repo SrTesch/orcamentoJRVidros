@@ -52,22 +52,22 @@ function alum() {
     if(tipoDeServ[0].checked || tipoDeServ[2].checked){
         aux = 'Janela 2 Folhas e Porta 2 Folhas'
         alumAlt = alt * 15
-        alumLarg = larg * 46
+        alumLarg = (larg + 5)* 46
         precoAlum = alumAlt + alumAlt
     }else if(tipoDeServ[1].checked || tipoDeServ[3].checked){
         aux = 'Janela 4 Folhas ou Porta 4 Folhas'
         alumAlt = alt * 25
-        alumLarg = larg * 46
+        alumLarg = (larg + 10) * 46
         precoAlum = alumAlt + alumAlt
     }else if(tipoDeServ[4].checked){
         aux = 'Box Frontal'
         alumAlt = alt * 13
-        alumLarg = larg * 38
+        alumLarg = (larg + 5) * 38
         precoAlum = alumAlt + alumAlt
     }else{
         aux = 'Box de Canto'
         alumAlt = alt * 15
-        alumLarg = larg * 38
+        alumLarg = (larg + 10) * 38
         precoAlum = alumAlt + alumAlt
     }
     return precoAlum
@@ -76,5 +76,5 @@ function alum() {
 function somaFinal() {
     let precoFinal = medidaVidro() + alum()
     let teste = document.getElementById('teste')
-    teste.innerHTML = `O preço é R$${precoFinal.toFixed(2)}`.replace(".", ",")
+    teste.innerHTML = `<br> O preço é R$${precoFinal.toFixed(2)}`.replace(".", ",")
 }

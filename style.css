@@ -48,6 +48,18 @@ p{
     min-width: 350px;
 }
 
+.but{
+    margin-left: 15px;
+}
+
+span#teste{
+    margin-top: 20px;
+}
+
+span#mo{
+    margin: 20px;
+}
+
 .confirm{
     font-size: 18px;
     width: 31.5%;
