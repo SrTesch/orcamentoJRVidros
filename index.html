@@ -12,95 +12,88 @@
     <main>
         <h1>Bem vindo à pagina de orçamentos da JRVidros!</h1>
         <img src="logo.png" alt="logo da loja">
-                <p>
-                    <br> <br>
-                    Selecione o tipo de Medida:
-                    <br>
-                    <input type="radio" name="tipoDeMed" value="padrao" id="padrao" required>
-                    <label for="padrao">Padrão</label>
-                    
-                    <input type="radio" name="tipoDeMed" value="box" id="box">
-                    <label for="box">Box</label><br>
+        <p>
+            <br> <br>
+            <!--Aqui a altura e a largura serão definidos pra podermos trabalhar com o valor dos aluminios e vidro-->
+            Digite a altura:
+            <input type="number" name="altura" id="altura" placeholder="cm"> <br>
+            Digite a largura:
+            <input type="number" name="largura" id="largura" placeholder="cm"> <br>
+            <br>
+            Selecione o tipo de Medida:
+            <br>
+            <input type="radio" name="tipoDeMed" value="padrao" id="padrao" required>
+                <label for="padrao">Padrão</label>    
+            <input type="radio" name="tipoDeMed" value="box" id="box">
+                <label for="box">Box</label><br>
 
-                    <input type="radio" name="tipoDeMed" value="eng" id="eng" >
-                    <label for="eng">Engenharia</label>
-                    <br> <br>
-                    Selecione a cor do vidro: <br>
-                    <input type="radio" name="cor" value="inc" id="incolor">
-                    <label for="incolor">Incolor</label>
-                    <input type="radio" name="cor" value="color" id="color">
-                    <label for="color">Colorido</label>
-                    <br> <br>
-                    <!--Escolhendo o tipo de serviço para definir qual kit de aluminio seria usado-->
-                    Selecione o tipo de Serviço <br>
-                    <input type="radio" name="serv" id="j2f">
-                    <label for="j2f">Janela 2 folhas</label><br>
+            <input type="radio" name="tipoDeMed" value="eng" id="eng" >
+                <label for="eng">Engenharia</label>
+            <br> <br>
+            Selecione a cor do vidro: <br>
+            <input type="radio" name="cor" value="inc" id="incolor">
+                <label for="incolor">Incolor</label>
+            <input type="radio" name="cor" value="color" id="color">
+                <label for="color">Colorido</label>
+            <br> <br>
+            <!--Escolhendo o tipo de serviço para definir qual kit de aluminio seria usado-->
+            Selecione o tipo de Serviço <br>
+            <input type="radio" name="serv" id="j2f">
+                <label for="j2f">Janela 2 folhas</label><br>
 
-                    <input type="radio" name="serv" id="j4f">
-                    <label for="j4f">Janela 4 folhas</label>
-                    <br>
-                    <input type="radio" name="serv" id="p2f">
-                    <label for="p2f">Porta 2 folhas</label>
-                    <br>
-                    <input type="radio" name="serv" id="p4f">
-                    <label for="p4f">Porta 4 folhas</label>
-                    <br>
-                    <input type="radio" name="serv" id="boxfront">
-                    <label for="boxfront">Box Frontal</label>
-                    <br>
-                    <input type="radio" name="serv" id="boxcanto">
-                    <label for="boxcanto">Box de Canto</label>
-                    <br><br>
-                    <!--Aqui a altura e a largura serão definidos pra podermos trabalhar com o valor dos aluminios e vidro-->
-                    Digite a altura:
-                    <input type="number" name="altura" id="altura" placeholder="cm"> <br>
-                    Digite a largura:
-                    <input type="number" name="largura" id="largura" placeholder="cm"> <br>
-                    <br>
-                    <!--A partir daqui o codigo serve pra calcular a mão de obra-->
-                    Selecione a quantidade de serviços: <br>
-                    <input type="radio" class="but" name="MO" id="1s">
-                    <label for="1s">1</label>
-                    <input type="radio" class="but" name="MO" id="2s">
-                    <label for="2s">2</label>
-                    <input type="radio" class="but" name="MO" id="3s">
-                    <label for="3s">3</label>
-                    <input type="radio" class="but" name="MO" id="4s">
-                    <label for="4s">4</label>
-                    <input type="radio" class="but" name="MO" id="5s">
-                    <label for="5s">5 ou mais</label>
-                    <br>
-                    <br>
-                    Neste serviço terá vinil? <br>
-                    <input type="radio" name="vin" id="sim">
-                    <label for="sim">Sim</label>
-                    <input type="radio" name="vin" id="nao">
-                    <label for="nao">Não</label>
-                    <br>
-                    <br>
-                    Neste serviço terá puxador? <br>
-                    <input type="radio" name="pux" id="npux">
-                    <label for="npux">Não</label>
-                    <input type="radio" name="pux" id="s1">
-                    <label for="s1">Sim, 1</label>
-                    <input type="radio" name="pux" id="s2">
-                    <label for="s2">Sim, 2</label>
-                    <span id="teste">
-                    </span>
-                </p>
-                <input type="submit" value="Confirmar" onclick="somaFinal()" class="confirm"><br>
+            <input type="radio" name="serv" id="j4f">
+                <label for="j4f">Janela 4 folhas</label>
+            <br>
+            <input type="radio" name="serv" id="p2f">
+                <label for="p2f">Porta 2 folhas</label>
+            <br>
+            <input type="radio" name="serv" id="p4f">
+                <label for="p4f">Porta 4 folhas</label>
+            <br>
+            <input type="radio" name="serv" id="boxfront">
+                <label for="boxfront">Box Frontal</label>
+            <br>
+            <input type="radio" name="serv" id="boxcanto">
+                <label for="boxcanto">Box de Canto</label>
+            <br><br>
+            <!--A partir daqui o codigo serve pra calcular a mão de obra-->
+            Selecione a quantidade de serviços: <br>
+            <input type="radio" class="but" name="MO" id="1s">
+                <label for="1s">1</label>
+            <input type="radio" class="but" name="MO" id="2s">
+                <label for="2s">2</label>
+            <input type="radio" class="but" name="MO" id="3s">
+                <label for="3s">3</label>
+            <input type="radio" class="but" name="MO" id="4s">
+                <label for="4s">4</label>
+            <input type="radio" class="but" name="MO" id="5s">
+                <label for="5s">5 ou mais</label>
+            <br>
+            <br>
+            Neste serviço terá vinil? <br>
+            <input type="radio" name="vin" id="sim">
+                <label for="sim">Sim</label>
+            <input type="radio" name="vin" id="nao">
+                <label for="nao">Não</label>
+            <br>
+            <br>
+            Neste serviço terá puxador? <br>
+            <input type="radio" name="pux" id="npux">
+                <label for="npux">Não</label>
+                <br>
+            <input type="radio" name="pux" id="s1">
+                <label for="s1">Sim, 1</label>
+                <br>
+            <input type="radio" name="pux" id="s2">
+                <label for="s2">Sim, 2</label>
+            <br>
+            <span id="teste"> </span>
+         </p>
+            <input type="submit" value="Confirmar" onclick="somaFinal()" class="confirm">
+            <br>
     </main>
     <footer>
         <a href="https://github.com/srTesch" target="_blank">&copy; Te<strong>S</strong>ch</a>
     </footer>
 </body>
 </html>
-
-
-
-
-
-
-
-
-

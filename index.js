@@ -8,6 +8,7 @@ function getRadioValue(name){
     }
     return valor;
 }
+
 function precoMetroQuadrado() {
     let tipoDeMed = getRadioValue('tipoDeMed');
     let cor = getRadioValue('cor');
@@ -52,7 +53,7 @@ function alum() { //calculo do preço dos alumínios
     if(tipoDeServ[0].checked){
         aux = 'Janela 2 Folhas'
         alumAlt = alt * 15
-        alumLarg = (larg + 0.05)* 46
+        alumLarg = (larg + 0.05) * 46
         precoAlum = alumAlt + alumLarg + 20
     }else if(tipoDeServ[1].checked){
         aux = 'Janela 4 Folhas'
@@ -62,7 +63,7 @@ function alum() { //calculo do preço dos alumínios
     }else if(tipoDeServ[2].checked){
         aux = 'Porta 2 Folhas'
         alumAlt = alt * 15
-        alumLarg = (larg + 0.05)* 46
+        alumLarg = (larg + 0.05) * 46
         precoAlum = alumAlt + alumLarg + 60
     }else if(tipoDeServ[3].checked){
         aux = 'Porta 4 Folhas'
@@ -147,14 +148,9 @@ function puxador() {
 }
 
 function somaFinal() {
-    console.log(medidaVidro())
-    console.log(alum())
-    console.log(maoDeObra())
-    console.log(vinil())
-    console.log(puxador())
     let precoFinal = medidaVidro() + alum() + maoDeObra() + vinil() + puxador()
     let teste = document.getElementById('teste')
     let preçoCartão = precoFinal * 1.11
     let preçoDinheiro = preçoCartão * 0.91
-    teste.innerHTML = `<br> Em até 10x sem juros no cartão<br> R$${preçoCartão.toFixed(2)} <br>A vista: R$${preçoDinheiro.toFixed(2)}`.replace(".", ",") 
+    teste.innerHTML = `<br>10x sem juros: R$${preçoCartão.toFixed(2)} <br> A vista: R$${preçoDinheiro.toFixed(2)}`.replace(".", ",") 
 }
