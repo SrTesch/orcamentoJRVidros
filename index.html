@@ -38,51 +38,29 @@
             <br> <br>
             <!--Escolhendo o tipo de serviço para definir qual kit de aluminio seria usado-->
             Selecione o tipo de Serviço <br>
-            <input type="radio" name="serv" id="j2f">
-                <label for="j2f">Janela 2 folhas</label><br>
-
-            <input type="radio" name="serv" id="j4f">
-                <label for="j4f">Janela 4 folhas</label>
-            <br>
-            <input type="radio" name="serv" id="p2f">
-                <label for="p2f">Porta 2 folhas</label>
-            <br>
-            <input type="radio" name="serv" id="p4f">
-                <label for="p4f">Porta 4 folhas</label>
-            <br>
-            <input type="radio" name="serv" id="boxfront">
-                <label for="boxfront">Box Frontal</label>
-            <br>
-            <input type="radio" name="serv" id="boxcanto">
-                <label for="boxcanto">Box de Canto</label>
-            <br>
-            <input type="radio" name="serv" id="pp">
-                <label for="pp">Porta Pivotante</label>
-            <br>
-            <input type="radio" name="serv" id="bascP">
-                <label for="bascP">Báscula P</label>
-            <br>
-            <input type="radio" name="serv" id="bascG">
-                <label for="bascG">Báscula G</label>
-            <br>
-            <input type="radio" name="serv" id="portaoP">
-                <label for="portaoP">Portãozinho P</label>
-            <br>
-            <input type="radio" name="serv" id="portaoG">
-                <label for="portaoG">Portãozinho G</label>
+            <select name="tipoDeServ" id="tipoDeServ">
+                <option value="0">Janela 2 Folhas</option>
+                <option value="1">Janela 4 Folhas</option>
+                <option value="2">Porta 2 Folhas</option>
+                <option value="3">Porta 4 Folhas</option>
+                <option value="4">Box Frontal</option>
+                <option value="5">Box de Canto</option>
+                <option value="6">Porta Pivotante</option>
+                <option value="7">Báscula P</option>
+                <option value="8">Báscula G</option>
+                <option value="9">Portãozinho P</option>
+                <option value="10">Portãozinho G</option>
+            </select>
             <br><br>
             <!--A partir daqui o codigo serve pra calcular a mão de obra-->
             Selecione a quantidade de serviços: <br>
-            <input type="radio" class="but" name="MO" id="1s">
-                <label for="1s">1</label>
-            <input type="radio" class="but" name="MO" id="2s">
-                <label for="2s">2</label>
-            <input type="radio" class="but" name="MO" id="3s">
-                <label for="3s">3</label>
-            <input type="radio" class="but" name="MO" id="4s">
-                <label for="4s">4</label>
-            <input type="radio" class="but" name="MO" id="5s">
-                <label for="5s">5 ou mais</label>
+            <select name="qserv" id="qserv">
+                <option value="0">1</option>
+                <option value="1">2</option>
+                <option value="2">3</option>
+                <option value="3">4</option>
+                <option value="4">5</option>
+            </select>
             <br>
             <br>
             Neste serviço terá vinil? <br>

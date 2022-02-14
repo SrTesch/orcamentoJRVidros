@@ -45,54 +45,54 @@ function alum() { //calculo do preço dos alumínios
     let larg = Number(aux2.value)
     alt = alt * 0.01
     larg = larg * 0.01
-    let tipoDeServ = document.getElementsByName('serv')
+    let serv = document.getElementById('tipoDeServ').value
     let aux = ''
     let precoAlum
     let alumAlt
     let alumLarg
-    if(tipoDeServ[0].checked){
+    if(serv == 0){
         aux = 'Janela 2 Folhas'
         alumAlt = alt * 15
         alumLarg = (larg + 0.05) * 46
         precoAlum = alumAlt + alumLarg + 20
-    }else if(tipoDeServ[1].checked){
+    }else if(serv == 1){
         aux = 'Janela 4 Folhas'
         alumAlt = alt * 25
         alumLarg = (larg + 0.10) * 46
         precoAlum = alumAlt + alumLarg + 32
-    }else if(tipoDeServ[2].checked){
+    }else if(serv == 2){
         aux = 'Porta 2 Folhas'
         alumAlt = alt * 15
         alumLarg = (larg + 0.05) * 46
         precoAlum = alumAlt + alumLarg + 60
-    }else if(tipoDeServ[3].checked){
+    }else if(serv == 3){
         aux = 'Porta 4 Folhas'
         alumAlt = alt * 25
         alumLarg = (larg + 0.10) * 46
         precoAlum = alumAlt + alumLarg + 80
-    }else if(tipoDeServ[4].checked){
+    }else if(serv == 4 ){
         aux = 'Box Frontal'
         alumAlt = alt * 13
         alumLarg = (larg + 0.05) * 38
         precoAlum = alumAlt + alumLarg + 20
-    }else if(tipoDeServ[5].checked){
+    }else if(serv == 5){
         aux = 'Box de Canto'
         alumAlt = alt * 15
         alumLarg = (larg + 0.10) * 38
         precoAlum = alumAlt + alumLarg + 35
-    }else if(tipoDeServ[6].checked){
+    }else if(serv == 6){
         aux = 'Porta Pivotante'
         precoAlum = 115
-    }else if(tipoDeServ[7].checked){
+    }else if(serv == 7){
         aux = 'Báscula P'
         precoAlum = 40
-    }else if(tipoDeServ[8].checked){
+    }else if(serv == 8){
         aux = 'Báscula g'
         precoAlum = 60
-    }else if(tipoDeServ[9].checked){
+    }else if(serv == 9){
         aux = 'portãozinho p'
         precoAlum = 40
-    }else if(tipoDeServ[10].checked){
+    }else if(serv == 10){
         aux = 'portãozinho g'
         precoAlum = 70
     }
@@ -101,53 +101,53 @@ function alum() { //calculo do preço dos alumínios
 
 function maoDeObra(){ //calculo da mão de obra
     let mo
-    let tipoDeServ = document.getElementsByName('serv')
+    let valor = document.getElementById('tipoDeServ').value
     let aux = ''
-    let qserv = document.getElementsByName('MO')
-    if(tipoDeServ[0].checked || tipoDeServ[1].checked || tipoDeServ[4].checked || tipoDeServ[6].checked){
-        if(qserv[0].checked){
+    let qserv = document.getElementById('qserv')
+    if(valor == 0 || valor == 1 || valor == 4 || valor == 6){
+        if(qserv == 0){
             mo = 140
-        }else if(qserv[1].checked){
+        }else if(qserv == 1){
             mo = 120
-        }else if(qserv[2].checked){
+        }else if(qserv == 2){
             mo = 110
-        }else if(qserv[3].checked){
+        }else if(qserv == 3){
             mo = 100
         }else{
             mo = 90
         }
-    }else if(tipoDeServ[2].checked || tipoDeServ[3].checked || tipoDeServ[5].checked){
-        if(qserv[0].checked){
+    }else if(valor == 2 || valor == 3 || valor == 5){
+        if(qserv == 0){
             mo = 160
-        }else if(qserv[1].checked){
+        }else if(qserv == 1){
             mo = 140
-        }else if(qserv[2].checked){
+        }else if(qserv == 2){
             mo = 120
-        }else if(qserv[3].checked){
+        }else if(qserv == 3){
             mo = 110
         }else{
             mo = 100
         }
-    }else if(tipoDeServ[7].checked || tipoDeServ[8].checked){
-        if(qserv[0].checked){
+    }else if(valor == 7 || valor == 8){
+        if(qserv == 0){
             mo = 80
-        }else if(qserv[1].checked){
+        }else if(qserv == 1){
             mo = 70
-        }else if(qserv[2].checked){
+        }else if(qserv == 2){
             mo = 60
-        }else if(qserv[3].checked){
+        }else if(qserv == 3){
             mo = 50
         }else{
             mo = 50
         }
-    }else if(tipoDeServ[9].checked || tipoDeServ[10].checked){
-        if(qserv[0].checked){
+    }else if(valor == 9 || valor == 10){
+        if(qserv == 0){
             mo = 100
-        }else if(qserv[1].checked){
+        }else if(qserv == 1){
             mo = 80
-        }else if(qserv[2].checked){
+        }else if(qserv == 2){
             mo = 70
-        }else if(qserv[3].checked){
+        }else if(qserv == 3){
             mo = 60
         }else{
             mo = 60
