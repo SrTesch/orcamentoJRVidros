@@ -80,6 +80,21 @@ function alum() { //calculo do preço dos alumínios
         alumAlt = alt * 15
         alumLarg = (larg + 0.10) * 38
         precoAlum = alumAlt + alumLarg + 35
+    }else if(tipoDeServ[6].checked){
+        aux = 'Porta Pivotante'
+        precoAlum = 115
+    }else if(tipoDeServ[7].checked){
+        aux = 'Báscula P'
+        precoAlum = 40
+    }else if(tipoDeServ[8].checked){
+        aux = 'Báscula g'
+        precoAlum = 60
+    }else if(tipoDeServ[9].checked){
+        aux = 'portãozinho p'
+        precoAlum = 40
+    }else if(tipoDeServ[10].checked){
+        aux = 'portãozinho g'
+        precoAlum = 70
     }
     return precoAlum
 }
@@ -89,7 +104,7 @@ function maoDeObra(){ //calculo da mão de obra
     let tipoDeServ = document.getElementsByName('serv')
     let aux = ''
     let qserv = document.getElementsByName('MO')
-    if(tipoDeServ[0].checked || tipoDeServ[1].checked || tipoDeServ[4].checked){
+    if(tipoDeServ[0].checked || tipoDeServ[1].checked || tipoDeServ[4].checked || tipoDeServ[6].checked){
         if(qserv[0].checked){
             mo = 140
         }else if(qserv[1].checked){
@@ -101,7 +116,7 @@ function maoDeObra(){ //calculo da mão de obra
         }else{
             mo = 90
         }
-    }else{
+    }else if(tipoDeServ[2].checked || tipoDeServ[3].checked || tipoDeServ[5].checked){
         if(qserv[0].checked){
             mo = 160
         }else if(qserv[1].checked){
@@ -112,6 +127,30 @@ function maoDeObra(){ //calculo da mão de obra
             mo = 110
         }else{
             mo = 100
+        }
+    }else if(tipoDeServ[7].checked || tipoDeServ[8].checked){
+        if(qserv[0].checked){
+            mo = 80
+        }else if(qserv[1].checked){
+            mo = 70
+        }else if(qserv[2].checked){
+            mo = 60
+        }else if(qserv[3].checked){
+            mo = 50
+        }else{
+            mo = 50
+        }
+    }else if(tipoDeServ[9].checked || tipoDeServ[10].checked){
+        if(qserv[0].checked){
+            mo = 100
+        }else if(qserv[1].checked){
+            mo = 80
+        }else if(qserv[2].checked){
+            mo = 70
+        }else if(qserv[3].checked){
+            mo = 60
+        }else{
+            mo = 60
         }
     }
     return mo
