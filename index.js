@@ -187,6 +187,11 @@ function puxador() {
 }
 
 function somaFinal() {
+    console.log(`metro quadrado do vidro ${medidaVidro()}`)
+    console.log(`kit/alumínio ${alum()})`
+    console.log(`mao de obra ${maoDeObra()}`)
+    console.log(`vinil: ${vinil()}`)
+    console.log(`puxador ${puxador()}`)
     let precoFinal = medidaVidro() + alum() + maoDeObra() + vinil() + puxador()
     let teste = document.getElementById('teste')
     let preçoCartão = precoFinal * 1.11
