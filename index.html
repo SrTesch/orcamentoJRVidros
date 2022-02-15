@@ -20,15 +20,17 @@
             Digite a largura:
             <input type="number" name="largura" id="largura" placeholder="cm"> <br>
             <br>
-            Selecione o tipo de Medida:
+            Selecione o tipo de Medida:<!--Aqui será definido o preço do metro quadrado do vidro-->
             <br>
+            <input type="radio" name="tipoDeMed" value="box" id="box">
+            <label for="box">Box</label>
+            <input type="radio" name="tipoDeMed" value="eng" id="eng" >
+            <label for="eng">Engenharia</label> <br>
+            
             <input type="radio" name="tipoDeMed" value="padrao" id="padrao" required>
                 <label for="padrao">Padrão</label>    
-            <input type="radio" name="tipoDeMed" value="box" id="box">
-                <label for="box">Box</label><br>
-
-            <input type="radio" name="tipoDeMed" value="eng" id="eng" >
-                <label for="eng">Engenharia</label>
+            <input type="radio" name="tipoDeMed" value="pia" id="pia" >
+                <label for="pia">Kit Pia</label>
             <br> <br>
             Selecione a cor do vidro: <br>
             <input type="radio" name="cor" value="inc" id="incolor">
@@ -43,13 +45,17 @@
                 <option value="1">Janela 4 Folhas</option>
                 <option value="2">Porta 2 Folhas</option>
                 <option value="3">Porta 4 Folhas</option>
+                <option value="6">Porta Pivotante</option>
+                <option value="14">Dupla Pivotante</option>
                 <option value="4">Box Frontal</option>
                 <option value="5">Box de Canto</option>
-                <option value="6">Porta Pivotante</option>
                 <option value="7">Báscula P</option>
                 <option value="8">Báscula G</option>
                 <option value="9">Portãozinho P</option>
                 <option value="10">Portãozinho G</option>
+                <option value="11">Kit Pia</option>
+                <option value="12">Trás vão comum</option>
+                <option value="13">Trás vão dupla</option>
             </select>
             <br><br>
             <!--A partir daqui o codigo serve pra calcular a mão de obra-->
@@ -67,7 +73,9 @@
             <input type="radio" name="vin" id="sim">
                 <label for="sim">Sim</label>
             <input type="radio" name="vin" id="nao">
-                <label for="nao">Não</label>
+                <label for="nao">Não</label> <br>
+            <input type="radio" name="vin" id="est">
+                <label for="est">sim,c/cant</label>
             <br>
             <br>
             Neste serviço terá puxador? <br>
