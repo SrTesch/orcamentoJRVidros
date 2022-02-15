@@ -31,20 +31,34 @@ function precoMetroQuadrado() {
 function medidaVidro() {
     let aux1 = document.getElementById('altura')
     let alt = Number(aux1.value)
-    let aux2 = document.getElementById('largura')
-    let larg = Number(aux2.value)
+    alt *= 0.01
+    let larg = transp()
     let p = precoMetroQuadrado()
-    precoVidro = (alt * 0.01) * (larg*0.01) * p
+    precoVidro = alt * larg * p
+    console.log(`preço do vidro: ${precoVidro}`)
     return precoVidro
+}
+
+function transp(){
+    let larg = document.getElementById('largura')
+    larg = Number(larg.value)
+    larg *= 0.01 //transformando de metro pra centímetros
+    let serv = document.getElementById('tipoDeServ').value
+    if(serv == 0 ||serv == 2 || serv == 4){
+        larg += 0.05
+    }else if(serv == 1|| serv == 3 || serv == 5){
+        larg += 0.1
+    }else{
+        larg=larg
+    }
+    return larg
 }
 
 function alum() { //calculo do preço dos alumínios
     let aux1 = document.getElementById('altura')
-    let aux2 = document.getElementById('largura')
     let alt = Number(aux1.value)
-    let larg = Number(aux2.value)
     alt = alt * 0.01
-    larg = larg * 0.01
+    let larg = transp()
     let serv = document.getElementById('tipoDeServ').value
     let aux = ''
     let precoAlum
@@ -53,33 +67,39 @@ function alum() { //calculo do preço dos alumínios
     if(serv == 0){
         aux = 'Janela 2 Folhas'
         alumAlt = alt * 15
-        alumLarg = (larg + 0.05) * 46
-        precoAlum = alumAlt + alumLarg + 20
+        alumLarg = larg * 46
+        kit = 20
+        precoAlum = alumAlt + alumLarg + kit
     }else if(serv == 1){
         aux = 'Janela 4 Folhas'
         alumAlt = alt * 25
-        alumLarg = (larg + 0.10) * 46
-        precoAlum = alumAlt + alumLarg + 32
+        alumLarg = larg * 46
+        kit = 32
+        precoAlum = alumAlt + alumLarg
     }else if(serv == 2){
         aux = 'Porta 2 Folhas'
         alumAlt = alt * 15
-        alumLarg = (larg + 0.05) * 46
-        precoAlum = alumAlt + alumLarg + 60
+        alumLarg = larg * 46
+        kit = 60
+        precoAlum = alumAlt + alumLarg + kit
     }else if(serv == 3){
         aux = 'Porta 4 Folhas'
         alumAlt = alt * 25
-        alumLarg = (larg + 0.10) * 46
-        precoAlum = alumAlt + alumLarg + 80
+        alumLarg = larg * 46
+        kit = 80
+        precoAlum = alumAlt + alumLarg + kit
     }else if(serv == 4 ){
         aux = 'Box Frontal'
         alumAlt = alt * 13
-        alumLarg = (larg + 0.05) * 38
-        precoAlum = alumAlt + alumLarg + 20
+        alumLarg = larg * 38
+        kit = 20
+        precoAlum = alumAlt + alumLarg + kit
     }else if(serv == 5){
         aux = 'Box de Canto'
         alumAlt = alt * 15
-        alumLarg = (larg + 0.10) * 38
-        precoAlum = alumAlt + alumLarg + 35
+        alumLarg = larg * 38
+        kit = 35
+        precoAlum = alumAlt + alumLarg + kit
     }else if(serv == 6){
         aux = 'Porta Pivotante'
         precoAlum = 115
@@ -96,6 +116,9 @@ function alum() { //calculo do preço dos alumínios
         aux = 'portãozinho g'
         precoAlum = 70
     }
+    
+    console.log(`preço do alumínio ${precoAlum.toFixed(2)} -${kit} = ${precoAlum.toFixed(2)-kit}`)
+    console.log(`preço do kit ${kit}`)
     return precoAlum
 }
 
@@ -103,7 +126,7 @@ function maoDeObra(){ //calculo da mão de obra
     let mo
     let valor = document.getElementById('tipoDeServ').value
     let aux = ''
-    let qserv = document.getElementById('qserv')
+    let qserv = document.getElementById('qserv').value
     if(valor == 0 || valor == 1 || valor == 4 || valor == 6){
         if(qserv == 0){
             mo = 140
@@ -153,16 +176,15 @@ function maoDeObra(){ //calculo da mão de obra
             mo = 60
         }
     }
+    console.log(`preço da mão de obra`)
     return mo
 }
 
 function vinil() {
     let aux1 = document.getElementById('altura')
-    let aux2 = document.getElementById('largura')
     let alt = Number(aux1.value)
-    let larg = Number(aux2.value)
-    alt = (alt + 5) * 0.01
-    larg = (larg + 5) * 0.01
+    alt = alt * 0.01
+    larg = transp()
     let vin = document.getElementsByName('vin')
     let precovin
     if(vin[0].checked){
@@ -170,6 +192,7 @@ function vinil() {
     }else{
         precovin = 0
     }
+    console.log(`preço do vinil: ${precovin}`)
     return precovin
 }
 
@@ -183,6 +206,7 @@ function puxador() {
     }else{
         puxAux = 60
     }
+    console.log(`preço do puxador: ${puxAux}`)
     return puxAux
 }
 
@@ -191,5 +215,6 @@ function somaFinal() {
     let teste = document.getElementById('teste')
     let preçoCartão = precoFinal * 1.11
     let preçoDinheiro = preçoCartão * 0.91
-    teste.innerHTML = `<br>10x sem juros: R$${preçoCartão.toFixed(2)} <br> A vista: R$${preçoDinheiro.toFixed(2)}`.replace(".", ",") 
+    teste.innerHTML = `<br>10x sem juros: R$${preçoCartão.toFixed(2)} <br> A vista: R$${preçoDinheiro.toFixed(2)}`.replace(".", ",")
+    console.log('FIM------------------------------') 
 }
