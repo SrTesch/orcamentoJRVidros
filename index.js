@@ -46,7 +46,7 @@ function transp(){
     let serv = document.getElementById('tipoDeServ').value
     if(serv == 0 ||serv == 2 || serv == 4){
         larg += 0.05
-    }else if(serv == 1|| serv == 3 || serv == 5){
+    }else if(serv == 1 || serv == 3 || serv == 5){
         larg += 0.1
     }else{
         larg=larg
@@ -75,7 +75,7 @@ function alum() { //calculo do preço dos alumínios
         alumAlt = alt * 25
         alumLarg = larg * 46
         kit = 32
-        precoAlum = alumAlt + alumLarg
+        precoAlum = alumAlt + alumLarg + kit
     }else if(serv == 2){
         aux = 'Porta 2 Folhas'
         alumAlt = alt * 15
@@ -176,7 +176,7 @@ function maoDeObra(){ //calculo da mão de obra
             mo = 60
         }
     }
-    console.log(`preço da mão de obra`)
+    console.log(`preço da mão de obra ${mo}`)
     return mo
 }
 
