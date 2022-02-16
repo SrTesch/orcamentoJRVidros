@@ -34,7 +34,7 @@ function medidaVidro() {
     let aux1 = document.getElementById('altura')
     let alt = Number(aux1.value)
     let serv = document.getElementById('tipoDeServ').value
-    if(serv == 12 || serv == 13){ //transpasso na altura da porta de correr por trás do vão
+    if(serv == 'trasVao' || serv == 'trasVaoD' || serv == 'trasVaoE'){ //transpasso na altura da porta de correr por trás do vão
         alt = (alt+5)*0.01
     }else {
         alt *= 0.01
@@ -51,10 +51,12 @@ function transp(){
     larg = Number(larg.value)
     larg *= 0.01 //transformando de metro pra centímetros
     let serv = document.getElementById('tipoDeServ').value
-    if(serv == 0 ||serv == 2 || serv == 4 || serv == 11 || serv == 12){
+    if(serv == 'j2f' ||serv == 'p2f' || serv == 'boxF' || serv == 'kitPia' || serv == 'trasVao' || serv == 'trasVaoE'){
         larg += 0.05
-    }else if(serv == 1 || serv == 3 || serv == 5 || serv == 13){
+    }else if(serv == 'j4f' || serv == 'p4f' || serv == 'boxC' || serv == 'trasVaoD'|| serv == 'versJ3' || serv == 'versP3'){
         larg += 0.1
+    }else if(serv == 'versJ6' || serv == 'versP6'){
+        larg += 0.2
     }else{
         larg=larg
     }
@@ -65,6 +67,7 @@ function alum() { //calculo do preço dos alumínios
     let serv = document.getElementById('tipoDeServ').value
     let aux1 = document.getElementById('altura')
     let alt = Number(aux1.value)
+    let cor = document.getElementsByName('corA')
 
     if(serv == 12 || serv == 13){ //transpasso na altura da porta de correr por trás do vão
         alt = (alt+5) * 0.01
@@ -72,97 +75,114 @@ function alum() { //calculo do preço dos alumínios
         alt = alt * 0.01
     }
     let larg = transp()
-    let aux = ''
     let precoAlum
     let alumAlt
     let alumLarg
-    if(serv == 0){
-        aux = 'Janela 2 Folhas'
+    if(serv == 'j2f'){
         alumAlt = alt * 15
         alumLarg = larg * 46
         kit = 20
         precoAlum = alumAlt + alumLarg + kit
-    }else if(serv == 1){
-        aux = 'Janela 4 Folhas'
+    }else if(serv == 'j4f'){
         alumAlt = alt * 25
         alumLarg = larg * 46
         kit = 32
         precoAlum = alumAlt + alumLarg + kit
-    }else if(serv == 2){
-        aux = 'Porta 2 Folhas'
+    }else if(serv == 'p2f'){
         alumAlt = alt * 15
         alumLarg = larg * 46
         kit = 60
         precoAlum = alumAlt + alumLarg + kit
-    }else if(serv == 3){
-        aux = 'Porta 4 Folhas'
+    }else if(serv == 'p4f'){
         alumAlt = alt * 25
         alumLarg = larg * 46
         kit = 80
         precoAlum = alumAlt + alumLarg + kit
-    }else if(serv == 4 ){
-        aux = 'Box Frontal'
+    }else if(serv == 'boxF' ){
         alumAlt = alt * 13
         alumLarg = larg * 38
         kit = 20
         precoAlum = alumAlt + alumLarg + kit
-    }else if(serv == 5){
-        aux = 'Box de Canto'
+    }else if(serv == 'boxC'){
         alumAlt = alt * 15
         alumLarg = larg * 38
         kit = 35
         precoAlum = alumAlt + alumLarg + kit
-    }else if(serv == 6){
-        aux = 'Porta Pivotante'
+    }else if(serv == 'piv'){
         kit = 0
         precoAlum = 115
-    }else if(serv == 7){
-        aux = 'Báscula P'
+    }else if(serv == 'bascP'){
         kit = 0
         precoAlum = 40
-    }else if(serv == 8){
+    }else if(serv == 'bascG'){
         aux = 'Báscula g'
         kit = 0
         precoAlum = 60
-    }else if(serv == 9){
-        aux = 'portãozinho p'
+    }else if(serv == 'portaoP'){
         precoAlum = 40
         kit = 0
-    }else if(serv == 10){
-        aux = 'portãozinho g'
+    }else if(serv == 'portaoG'){
         precoAlum = 70
         kit = 0
-    }else if(serv == 11){
-        aux = 'kit pia'
+    }else if(serv == 'kitPia'){
         alumAlt = alt * 13
         alumLarg = larg * 35
         kit = 20
         precoAlum = alumAlt + alumLarg + kit
-    }else if(serv == 12){//´porta de correr por trás do vão comum
+    }else if(serv == 'trasVao'){
         alumAlt = alt * 15
         alumLarg = larg * 46 * 2
         kit = 60
         precoAlum = alumAlt + alumLarg + kit
-    }else if(serv == 13){//porta de correr por trás do vão dupla
+    }else if(serv == 'trasVaoE'){
+        alumAlt = alt * 15
+        alumLarg = larg * 46 * 2
+        kit = 60
+        precoAlum = alumAlt + alumLarg + kit +80//estruturação
+    }else if(serv == 'trasVaoD'){
         alumAlt = alt * 25
         alumLarg = larg * 46 * 2
         kit = 80
         precoAlum = alumAlt + alumLarg + kit
-    }else if(serv == 14){//porta dupla pivotante
+    }else if(serv == 'pivD'){
         precoAlum = 255
         kit = 0
+    }else if(serv == 'versJ3'){
+        alumAlt = alt * 25
+        alumLarg = larg * 76
+        kit = 70
+        precoAlum = alumAlt + alumLarg + kit
+    }else if(serv == 'versP3'){
+        alumAlt = alt * 25
+        alumLarg = larg * 76
+        kit = 110
+        precoAlum = alumAlt + alumLarg + kit
+    }else if(serv == 'versJ6'){
+        alumAlt = alt * 25
+        alumLarg = larg * 76
+        kit = 125
+        precoAlum = alumAlt + alumLarg + kit
+    }else if(serv == 'versP6'){
+        alumAlt = alt * 25
+        alumLarg = larg * 76
+        kit = 180
+        precoAlum = alumAlt + alumLarg + kit
+    }
+
+    if(cor[1].checked){
+        precoAlum *= 1.2
     }
     console.log(`alumínio: ${precoAlum - kit}`)
     console.log(`kit: ${kit}`)
+
     return precoAlum
 }
 
 function maoDeObra(){ //calculo da mão de obra
     let mo
     let valor = document.getElementById('tipoDeServ').value
-    let aux = ''
     let qserv = document.getElementById('qserv').value
-    if(valor == 0 || valor == 1 || valor == 4 || valor == 6 || valor == 11){//janela 2 folhas
+    if(valor == 'j2f' || valor == 'j4f' || valor == 'boxF' || valor == 'piv' || valor == 'kitPia'){
         if(qserv == 0){
             mo = 140
         }else if(qserv == 1){
@@ -174,7 +194,7 @@ function maoDeObra(){ //calculo da mão de obra
         }else{
             mo = 90
         }
-    }else if(valor == 2 || valor == 3 || valor == 5 || valor == 12){ //janela 4 folhas
+    }else if(valor == 'p2f' || valor == 'p4f' || valor == 'boxC' || valor == 'trasVao' || valor == 'trasVaoE'){ 
         if(qserv == 0){
             mo = 160
         }else if(qserv == 1){
@@ -186,7 +206,7 @@ function maoDeObra(){ //calculo da mão de obra
         }else{
             mo = 100
         }
-    }else if(valor == 13){ //porta de correr por tras do vão dupla
+    }else if(valor == 'trasVaoD'){
         if(qserv == 0){
             mo = 180
         }else if(qserv == 1){
@@ -196,19 +216,17 @@ function maoDeObra(){ //calculo da mão de obra
         }else if(qserv == 3){
             mo = 130
         }
-    }else if(valor == 7 || valor == 8){
+    }else if(valor == 'bascP' || valor == 'bascG'){
         if(qserv == 0){
             mo = 80
         }else if(qserv == 1){
             mo = 70
         }else if(qserv == 2){
             mo = 60
-        }else if(qserv == 3){
-            mo = 50
         }else{
             mo = 50
         }
-    }else if(valor == 9 || valor == 10){
+    }else if(valor == 'portaoP' || valor == 'portaoG'){
         if(qserv == 0){
             mo = 100
         }else if(qserv == 1){
@@ -220,7 +238,7 @@ function maoDeObra(){ //calculo da mão de obra
         }else{
             mo = 60
         }
-    }else if(valor == 14){
+    }else if(valor == 'pivD'){
         if(qserv == 0){
             mo = 220
         }else if(qserv == 1){
@@ -232,6 +250,38 @@ function maoDeObra(){ //calculo da mão de obra
         }else{
             mo = 150
         }
+    }else if(valor == 'versJ3'){
+        if(qserv == 0){
+            mo = 180
+        }else if(qserv == 1){
+            mo = 160
+        }else{
+            mo = 140
+        }
+    }else if(valor == 'versJ6'){
+        if(qserv == 0){
+            mo = 200
+        }else if(qserv == 1){
+            mo = 180
+        }else{
+            mo = 160
+        }
+    }else if(valor == 'versP3'){
+        if(qserv == 0){
+            mo = 220
+        }else if(qserv == 1){
+            mo = 200
+        }else{
+            mo = 180
+        }
+    }else if(valor == 'versP6'){
+        if(qserv == 0){
+            mo = 250
+        }else if(qserv == 1){
+            mo = 230
+        }else{
+            mo = 210
+        }
     }
     console.log(`preço da mão de obra ${mo}`)
     return mo
@@ -241,7 +291,7 @@ function vinil() {
     let aux1 = document.getElementById('altura')
     let alt = Number(aux1.value)
     let serv = document.getElementById('tipoDeServ').value
-    if(serv == 12 || serv == 13){ //transpasso na altura da porta de correr por trás do vão
+    if(serv == 'trasVao' || serv == 'trasVaoD' || serv == 'trasVaoE'){ //transpasso na altura da porta de correr por trás do vão
         alt = (alt+5)*0.01
     }else {
         alt *= 0.01
@@ -280,5 +330,5 @@ function somaFinal() {
     let preçoCartão = precoFinal * 1.11
     let preçoDinheiro = preçoCartão * 0.91
     teste.innerHTML = `<br>10x sem juros: R$${preçoCartão.toFixed(2)} <br> A vista: R$${preçoDinheiro.toFixed(2)}`.replace(".", ",")
-    console.log('FIM------------------------------') 
+    console.log('FIM-------------------------') 
 }

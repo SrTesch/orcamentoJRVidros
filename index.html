@@ -39,25 +39,35 @@
                 <label for="color">Colorido</label>
             <br> <br>
             <!--Escolhendo o tipo de serviço para definir qual kit de aluminio seria usado-->
-            Selecione o tipo de Serviço <br>
+            Selecione o tipo de Serviço: <br>
             <select name="tipoDeServ" id="tipoDeServ">
-                <option value="0">Janela 2 Folhas</option>
-                <option value="1">Janela 4 Folhas</option>
-                <option value="2">Porta 2 Folhas</option>
-                <option value="3">Porta 4 Folhas</option>
-                <option value="6">Porta Pivotante</option>
-                <option value="14">Dupla Pivotante</option>
-                <option value="4">Box Frontal</option>
-                <option value="5">Box de Canto</option>
-                <option value="7">Báscula P</option>
-                <option value="8">Báscula G</option>
-                <option value="9">Portãozinho P</option>
-                <option value="10">Portãozinho G</option>
-                <option value="11">Kit Pia</option>
-                <option value="12">Trás vão comum</option>
-                <option value="13">Trás vão dupla</option>
+                <option value="j2f">Janela 2 Folhas</option>
+                <option value="j4f">Janela 4 Folhas</option>
+                <option value="p2f">Porta 2 Folhas</option>
+                <option value="p4f">Porta 4 Folhas</option>
+                <option value="piv">Porta Pivotante</option>
+                <option value="pivD">Dupla Pivotante</option>
+                <option value="boxF">Box Frontal</option>
+                <option value="boxC">Box de Canto</option>
+                <option value="bascP">Báscula P</option>
+                <option value="bascG">Báscula G</option>
+                <option value="portaoP">Portãozinho P</option>
+                <option value="portaoG">Portãozinho G</option>
+                <option value="kitPia">Kit Pia</option>
+                <option value="trasVao">Trás do vão</option>
+                <option value="trasVaoE">Trás do vão c est/</option>
+                <option value="trasVaoD">Trás do vão dupla</option>
+                <option value="versJ3">Janela Versatik 3F</option>
+                <option value="versJ6">Janela Versatik 6F</option>
+                <option value="versP3">Porta Versatik 3F</option>
+                <option value="versP6">Porta Versatik 6F</option>
             </select>
             <br><br>
+            Cor do alumínio: <br>
+            <input type="radio" name="corA" id="branco">
+                <label for="branco">Branco</label>
+            <input type="radio" name="corA" id="preto">
+                <label for="preto">Preto</label> <br> <br>
             <!--A partir daqui o codigo serve pra calcular a mão de obra-->
             Selecione a quantidade de serviços: <br>
             <select name="qserv" id="qserv">
@@ -88,6 +98,8 @@
             <input type="radio" name="pux" id="s2">
                 <label for="s2">Sim, 2</label>
             <br>
+            <br>
+
             <span id="teste"> </span>
          </p>
             <input type="submit" value="Confirmar" onclick="somaFinal()" class="confirm">
