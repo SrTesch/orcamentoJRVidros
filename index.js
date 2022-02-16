@@ -16,7 +16,7 @@ function precoMetroQuadrado() {
         'color':{
             'padrao':200.00, 
             'eng':230.00,
-            'box':199.00,
+            'box':189.00,
             'pia':120.00
         },
         'inc':{
@@ -80,34 +80,58 @@ function alum() { //calculo do preço dos alumínios
     let alumLarg
     if(serv == 'j2f'){
         alumAlt = alt * 15
-        alumLarg = larg * 46
+        alumLarg = larg * 52
+        aux = alumAlt + alumLarg
+        if(cor[1].checked){
+            aux *= 1.2
+        }
         kit = 20
-        precoAlum = alumAlt + alumLarg + kit
+        precoAlum = aux + kit
     }else if(serv == 'j4f'){
         alumAlt = alt * 25
-        alumLarg = larg * 46
+        alumLarg = larg * 52
+        aux = alumAlt + alumLarg
+        if(cor[1].checked){
+            aux *= 1.2
+        }
         kit = 32
-        precoAlum = alumAlt + alumLarg + kit
+        precoAlum = aux + kit
     }else if(serv == 'p2f'){
         alumAlt = alt * 15
-        alumLarg = larg * 46
+        alumLarg = larg * 52
+        aux = alumAlt + alumLarg
+        if(cor[1].checked){
+            aux *= 1.2
+        }
         kit = 60
-        precoAlum = alumAlt + alumLarg + kit
+        precoAlum = aux + kit
     }else if(serv == 'p4f'){
         alumAlt = alt * 25
-        alumLarg = larg * 46
+        alumLarg = larg * 52
+        aux = alumAlt + alumLarg
+        if(cor[1].checked){
+            aux *= 1.2
+        }
         kit = 80
-        precoAlum = alumAlt + alumLarg + kit
+        precoAlum = aux + kit
     }else if(serv == 'boxF' ){
         alumAlt = alt * 13
-        alumLarg = larg * 38
+        alumLarg = larg * 48
+        aux = alumAlt + alumLarg
+        if(cor[1].checked){
+            aux *= 1.2
+        }
         kit = 20
-        precoAlum = alumAlt + alumLarg + kit
+        precoAlum = aux + kit
     }else if(serv == 'boxC'){
         alumAlt = alt * 15
-        alumLarg = larg * 38
+        alumLarg = larg * 48
+        aux = alumAlt + alumLarg
+        if(cor[1].checked){
+            aux *= 1.2
+        }
         kit = 35
-        precoAlum = alumAlt + alumLarg + kit
+        precoAlum = aux + kit
     }else if(serv == 'piv'){
         kit = 0
         precoAlum = 115
@@ -126,51 +150,75 @@ function alum() { //calculo do preço dos alumínios
         kit = 0
     }else if(serv == 'kitPia'){
         alumAlt = alt * 13
-        alumLarg = larg * 35
+        alumLarg = larg * 45
+        aux = alumAlt + alumLarg
+        if(cor[1].checked){
+            aux *= 1.2
+        }
         kit = 20
-        precoAlum = alumAlt + alumLarg + kit
+        precoAlum = aux + kit
     }else if(serv == 'trasVao'){
         alumAlt = alt * 15
-        alumLarg = larg * 46 * 2
+        alumLarg = larg * 52 * 2
+        aux = alumAlt + alumLarg
+        if(cor[1].checked){
+            aux *= 1.2
+        }
         kit = 60
-        precoAlum = alumAlt + alumLarg + kit
+        precoAlum = aux + kit
     }else if(serv == 'trasVaoE'){
         alumAlt = alt * 15
-        alumLarg = larg * 46 * 2
+        alumLarg = larg * 52 * 2
+        aux = alumAlt + alumLarg
+        if(cor[1].checked){
+            aux *= 1.2
+        }
         kit = 60
-        precoAlum = alumAlt + alumLarg + kit +80//estruturação
+        precoAlum = aux + kit +80//estruturação
     }else if(serv == 'trasVaoD'){
         alumAlt = alt * 25
-        alumLarg = larg * 46 * 2
+        alumLarg = larg * 52 * 2
+        aux = alumAlt + alumLarg
+        if(cor[1].checked){
+            aux *= 1.2
+        }
         kit = 80
-        precoAlum = alumAlt + alumLarg + kit
+        precoAlum = aux + kit
     }else if(serv == 'pivD'){
         precoAlum = 255
         kit = 0
     }else if(serv == 'versJ3'){
         alumAlt = alt * 25
-        alumLarg = larg * 76
+        alumLarg = larg * 84
+        aux = alumAlt + alumLarg
+        if(cor[1].checked){
+            aux *= 1.2
+        }
         kit = 70
-        precoAlum = alumAlt + alumLarg + kit
+        precoAlum = aux + kit
     }else if(serv == 'versP3'){
         alumAlt = alt * 25
-        alumLarg = larg * 76
+        alumLarg = larg * 84
         kit = 110
         precoAlum = alumAlt + alumLarg + kit
     }else if(serv == 'versJ6'){
         alumAlt = alt * 25
-        alumLarg = larg * 76
+        alumLarg = larg * 84
+        aux = alumAlt + alumLarg
+        if(cor[1].checked){
+            aux *= 1.2
+        }
         kit = 125
-        precoAlum = alumAlt + alumLarg + kit
+        precoAlum = aux + kit
     }else if(serv == 'versP6'){
         alumAlt = alt * 25
-        alumLarg = larg * 76
+        alumLarg = larg * 84
+        aux = alumAlt + alumLarg
+        if(cor[1].checked){
+            aux *= 1.2
+        }
         kit = 180
-        precoAlum = alumAlt + alumLarg + kit
-    }
-
-    if(cor[1].checked){
-        precoAlum *= 1.2
+        precoAlum = aux + kit
     }
     console.log(`alumínio: ${precoAlum - kit}`)
     console.log(`kit: ${kit}`)
