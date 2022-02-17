@@ -1,0 +1,18 @@
+body{
+    background-image: url(images/fundo.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.wrapper{
+    display: grid;
+    grid-template-columns: 217px 217px 217px 217px 217px 217px 217px;
+    font-size: 1.6em;
+}
+.button{
+    margin: 3px;
+    padding: 4px;
+    color: #2E4D50;
+    background-color: white;
+    border-radius: 9px;
+}
