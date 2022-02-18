@@ -1,0 +1,70 @@
+body{
+    background-image: url(../images/fundo.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+h2{
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.726);
+}
+
+.portas{
+    padding: 5px;
+    margin: auto;
+    width: max-content;
+    max-width: 95vw;
+    display: grid;
+    font-size: 1.6em;
+    border: solid  white 1px;
+    grid-template-columns: 219px 219px 190px 200px 150px 230px;
+}
+
+.button{
+    margin: 3px;
+    padding: 4px;
+    color: #2E4D50;
+    background-color: white;
+    border-radius: 9px;
+}
+
+main{
+    color: white;
+    text-align: center;
+}
+
+.janelas{
+    padding: 5px;
+    margin: auto;
+    width: max-content;
+    display: grid;
+    font-size: 1.6em;
+    border: solid  white 1px;
+    grid-template-columns: 195px 195px 230px 230px 110px 230px;
+}
+
+.box{
+    padding: 5px;
+    margin: auto;
+    width: max-content;
+    max-width: 95vw;
+    display: grid;
+    font-size: 1.6em;
+    border: solid  white 1px;
+    grid-template-columns: 219px 219px 190px 200px 150px 230px;
+}
+
+.outros{
+    padding: 5px;
+    margin: auto;
+    width: max-content;
+    max-width: 95vw;
+    display: grid;
+    font-size: 1.6em;
+    border: solid  white 1px;
+    grid-template-columns: 219px 219px 190px 200px 150px 230px;
+}
+
+a{
+    text-decoration: none;
+}
+
