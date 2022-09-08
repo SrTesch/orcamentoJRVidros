@@ -6,9 +6,6 @@
     margin: 0%;
 }
 
-h1{
-    text-align: center;
-}
 body{
     padding: 0%;
     background-color: #1c1cbb;
@@ -16,11 +13,16 @@ body{
 }
 
 #altura{
-    width: 50px;
+    width: 90px;
+    height: 40px;
+    font-size: 24px;
     margin-left: 15px;
 }
 #largura{
-    width: 50px;
+    width: 90px;
+    height: 40px;
+    font-size: 24px;
+
     margin-left: 4px;
 }
 
@@ -30,42 +32,24 @@ body{
     background-attachment: fixed;
 }
 
-main{
-    text-align: center;
-}
-
-h1{
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.801);
-    padding-bottom: 20px;
-}
-
-span#teste{
-    margin-top: 12px;
-}
-
 p{
     font-size: 22px;
     background-color: white;
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.603);
     padding: 5px;
     color: black;
-    width: 30%;
+    width: 100%;
     margin: auto;
-    border-radius: 13px;
-    margin-bottom: 15px;
     min-width: 350px;
 }
 
-.but{
-    margin-left: 15px;
-}
 
 span#teste{
     margin-top: 20px;
 }
 
-span#mo{
-    margin: 20px;
+
+#proj{
+    margin-left: 360px;
 }
 
 .confirm{
@@ -81,8 +65,13 @@ select#tipoDeServ{
     font-size: 0.8em;
 }
 
-select#qserv{
+#space{
+    margin: 3px;
+}
+
+#qserv{
     font-size: 0.8em;
+    position: relative;
 }
 
 footer{

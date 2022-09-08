@@ -377,6 +377,6 @@ function somaFinal() {
     let teste = document.getElementById('teste')
     let preçoCartão = precoFinal * 1.11
     let preçoDinheiro = preçoCartão * 0.91
-    teste.innerHTML = `<br>10x sem juros: R$${preçoCartão.toFixed(2)} <br> A vista: R$${preçoDinheiro.toFixed(2)}`.replace(".", ",")
+    teste.innerHTML = `<br>9x sem juros: R$${preçoCartão.toFixed(2)} <br> A vista: R$${preçoDinheiro.toFixed(2)}`.replace(".", ",")
     console.log('FIM-------------------------') 
 }
