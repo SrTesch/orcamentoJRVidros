@@ -17,13 +17,15 @@ function precoMetroQuadrado() {
             'padrao':179.2, 
             'eng':210,
             'box':176.4,
-            'pia':120.00
+            'pia':120,
+            'esp':200
         },
         'inc':{
             'padrao':133.5,
             'eng':154,
             'box':123,
-            'pia':120.00
+            'pia':120,
+            'esp':200
         },
         'default':{}    
     } 
@@ -219,7 +221,11 @@ function alum() { //calculo do preço dos alumínios
         }
         kit = 180
         precoAlum = aux + kit
+    }else if(serv == 'esp'){
+        precoAlum = 0
+        kit = 0
     }
+
     console.log(`alumínio: ${precoAlum - kit}`)
     console.log(`kit: ${kit}`)
 
@@ -330,6 +336,8 @@ function maoDeObra(){ //calculo da mão de obra
         }else{
             mo = 210
         }
+    }else if(valor == 'esp'){
+        mo = 0
     }
     console.log(`preço da mão de obra ${mo}`)
     return mo
