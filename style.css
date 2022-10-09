@@ -30,6 +30,7 @@ body{
     background-image: url(images/fundo.jpg);
     background-size: cover;
     background-attachment: fixed;
+    text-align: center;
 }
 
 p{
@@ -46,11 +47,6 @@ p{
 
 span#teste{
     margin-top: 20px;
-}
-
-
-#proj{
-    margin-left: 360px;
 }
 
 .confirm{
@@ -77,6 +73,7 @@ select#tipoDeServ{
 
 footer{
     margin-top: 8px;
+    text-align: center;
 }
 
 footer > a{
@@ -90,4 +87,8 @@ footer > a{
 footer > a:hover{
     background-color: white;
     color: #223F43;
+}
+
+#proj{
+    margin: 0px 20px;
 }
