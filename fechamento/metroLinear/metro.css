@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300&display=swap');
+
+*{
+    font-family: 'Rowdies', monospace;
+    padding: 0%;
+    margin: 0%;
+}
+body{
+    padding: 0%;
+    background-color: #1c1cbb;
+    color: white;
+}
+
+
+
+#altVin{
+    width: 50px;
+    margin-left: 15px;
+}
+#largVin{
+    width: 50px;
+    margin-left: 4px;
+}
+
+body{
+    background-image: url(../images/fundo.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+main{
+    text-align: center;
+}
+
+input[type=number]{
+    width: 70px;
+    height: 30px;
+    font-size: 20px;
+}
+
+select{
+    font-size: 20px;
+}
+
+#altVin{
+    width: 90px;
+}
+
+#largVin{
+    width: 90px;
+}
+
+span#teste{
+    margin-top: 12px;
+}
+
+#space{
+    margin: 3px;
+}
+
+p{
+    font-size: 22px;
+    background-color: white;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.603);
+    padding: 5px;
+    color: black;
+    width: 100%;
+    margin: auto;
+    min-width: 350px;
+}
+
+.but{
+    margin-left: 15px;
+}
+
+span#teste{
+    margin-top: 20px;
+}
+
+
+.confirm{
+    font-size: 18px;
+    width: 31.5%;
+    cursor: pointer;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.61);
+    margin: auto;
+}
+
+select#tipoDeServ{
+    width: 155px;
+    font-size: 0.8em;
+}
+
+select#qserv{
+    font-size: 0.8em;
+}
+
+footer{
+    margin-top: 8px;
+    text-align: center;
+}
+
+footer > a{
+    padding: 2px;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.788);
+    text-decoration: none;
+    color: white;
+    transition-duration: .5s;
+    border-radius: 3px;
+}
+
+footer > a:hover{
+    background-color: white;
+    color: #223F43;
+}

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metro Linear</title>
+    <link rel="stylesheet" href="metro.css">
+    <script src="metro.js"></script>
+</head>
+<body>
+    <main>
+        <p>
+            <input type="number" name="metro1" id="metro1">
+        </p>
+        <p>
+            <select name="tipoPerfil1" id="tipoPerfil1">
+                <option value="tuboPan">Tubo Panorâmico</option>
+                <option value="tubo1x1">Tubo 1 x 1</option>
+                <option value="tubo15x15">Tubo 1,¹/² x 1,¹/²</option>
+                <option value="tubo2x15">Tubo 2 x 1,¹/²</option>
+                <option value="tubo2x2">Tubo 2 x 2</option>
+                <option value="tubo3x15">Tubo 3 x 1,¹/²</option>
+                <option value="tubo4x2">Tubo 4 x 2</option>
+                <option value="tubo4x4">Tubo 4 x 4</option>
+                <option value="tuboRed2">Tubo Redondo 2</option>
+                <option value="tuboRed3">Tubo Redondo 3</option>
+                <option value="reg5x5">Régua ¹/² x ¹/²</option>
+                <option value="reg1x5">Régua 1 x ¹/²</option>
+                <option value="reg2x5">Régua 2 x ¹/²</option>
+                <option value="corre28">Corre 28</option>
+                <option value="cant12">Cantoneira 1/2</option>
+                <option value="cant58">Cantoneira 5/8</option>
+                <option value="cant34">Cantoneira 3/4</option>
+                <option value="cant1">Cantoneira 1</option>
+                <option value="jotinha">Jotinha</option>
+                <option value="jotao">Jotão</option>
+                <option value="caval">Cavalão</option>
+                <option value="superCaval">Super Cavalão</option>
+                <option value="cantBag">Cantoneira Baguetada</option>
+                <option value="dobBox">Dobradiça de Box</option>
+                <option value="dobPort">Dobradiça Portãozinho</option>
+                <option value="u8">U de 8mm</option>
+                <option value="u10">U de 10mm</option>
+                <option value="uGuard">U de Guarda Corpo</option>
+                <option value="parTorreInox">Parafuso Torre de Inox</option>
+                <option value="parInoxTorreInox">Parafuso Inox</option>
+                <option value="torreInox">Torre de Inox</option>
+                <option value="pont15x15">Pontalete 1,¹/² x 1,¹/²</option>
+                <option value="pont2x15">Pontalete 2 x 1,¹/²</option>
+                <option value="ibere">Iberê</option>
+                <option value="guarn39">Guarnição 39</option>
+                <option value="guarn44">Guarnição 44</option>
+                <option value="guarn51">Guarnição 51</option>
+                <option value="puxHquad">Pux H Quadrado</option>
+                <option value="puxHquadCrom">Pux H Quadrado Crom</option>
+                <option value="puxHred">Pux H Redondo</option>
+                <option value="puxHredCrom">Pux H Redondo Crom</option>
+                <option value="pux1m">Pux 1 metro</option>
+                <option value="puxBolaP">Pux Bola Pequeno</option>
+                <option value="puxBolaG">Pux Bola Grande</option>
+                <option value="puxBox">Pux Box</option>
+                <option value="bicoTucP">Bico de Tucano P</option>
+                <option value="bicoTucM">Bico de Tucano M</option>
+                <option value="bicoTucG">Bico de Tucano G</option>
+            </select>
+        </p>
+        <p>
+            <br>
+            <input type="number" name="metro2" id="metro2">
+        </p>
+        <p>
+            <select name="tipoPerfil2" id="tipoPerfil2">
+                <option value="tuboPan">Tubo Panorâmico</option>
+                <option value="tubo1x1">Tubo 1 x 1</option>
+                <option value="tubo15x15">Tubo 1,¹/² x 1,¹/²</option>
+                <option value="tubo2x15">Tubo 2 x 1,¹/²</option>
+                <option value="tubo2x2">Tubo 2 x 2</option>
+                <option value="tubo3x15">Tubo 3 x 1,¹/²</option>
+                <option value="tubo4x2">Tubo 4 x 2</option>
+                <option value="4x4">Tubo 4 x 4</option>
+                <option value="tuboRedondo2">Tubo Redondo 2</option>
+                <option value="tuboRedondo3">Tubo Redondo 3</option>
+                <option value="reg5x5">Régua ¹/² x ¹/²</option>
+                <option value="reg1x5">Régua 1 x ¹/²</option>
+                <option value="reg2x5">Régua 2 x ¹/²</option>
+                <option value="corre28">Corre 28</option>
+                <option value="cant12">Cantoneira 1/2</option>
+                <option value="cant58">Cantoneira 5/8</option>
+                <option value="cant34">Cantoneira 3/4</option>
+                <option value="cant1">Cantoneira 1</option>
+                <option value="jotinha">Jotinha</option>
+                <option value="jotao">Jotão</option>
+                <option value="caval">Cavalão</option>
+                <option value="superCaval">Super Cavalão</option>
+                <option value="cantBag">Cantoneira Baguetada</option>
+                <option value="dobBox">Dobradiça de Box</option>
+                <option value="dobPort">Dobradiça Portãozinho</option>
+                <option value="u8">U de 8mm</option>
+                <option value="u10">U de 10mm</option>
+                <option value="uGuard">U de Guarda Corpo</option>
+                <option value="parTorreInox">Parafuso Torre de Inox</option>
+                <option value="parInoxTorreInox">Parafuso Inox</option>
+                <option value="torreInox">Torre de Inox</option>
+                <option value="pont15x15">Pontalete 1,¹/² x 1,¹/²</option>
+                <option value="pont2x15">Pontalete 2 x 1,¹/²</option>
+                <option value="ibere">Iberê</option>
+                <option value="guarn39">Guarnição 39</option>
+                <option value="guarn44">Guarnição 44</option>
+                <option value="guarn51">Guarnição 51</option>
+                <option value="puxHquad">Pux H Quadrado</option>
+                <option value="puxHquadCrom">Pux H Quadrado Crom</option>
+                <option value="puxHred">Pux H Redondo</option>
+                <option value="puxHredCrom">Pux H Redondo Crom</option>
+                <option value="pux1m">Pux 1 metro</option>
+                <option value="puxBolaP">Pux Bola Pequeno</option>
+                <option value="puxBolaG">Pux Bola Grande</option>
+                <option value="puxBox">Pux Box</option>
+                <option value="bicoTucP">Bico de Tucano P</option>
+                <option value="bicoTucM">Bico de Tucano M</option>
+                <option value="bicoTucG">Bico de Tucano G</option>
+            </select>
+        </p>
+        <p>
+            <br>
+            <input type="number" name="metro3" id="metro3">
+        </p>
+        <p>
+            <select name="tipoPerfil3" id="tipoPerfil3">
+                <option value="tuboPan">Tubo Panorâmico</option>
+                <option value="tubo1x1">Tubo 1 x 1</option>
+                <option value="tubo15x15">Tubo 1,¹/² x 1,¹/²</option>
+                <option value="tubo2x15">Tubo 2 x 1,¹/²</option>
+                <option value="tubo2x2">Tubo 2 x 2</option>
+                <option value="tubo3x15">Tubo 3 x 1,¹/²</option>
+                <option value="tubo4x2">Tubo 4 x 2</option>
+                <option value="4x4">Tubo 4 x 4</option>
+                <option value="tuboRedondo2">Tubo Redondo 2</option>
+                <option value="tuboRedondo3">Tubo Redondo 3</option>
+                <option value="reg5x5">Régua ¹/² x ¹/²</option>
+                <option value="reg1x5">Régua 1 x ¹/²</option>
+                <option value="reg2x5">Régua 2 x ¹/²</option>
+                <option value="corre28">Corre 28</option>
+                <option value="cant12">Cantoneira 1/2</option>
+                <option value="cant58">Cantoneira 5/8</option>
+                <option value="cant34">Cantoneira 3/4</option>
+                <option value="cant1">Cantoneira 1</option>
+                <option value="jotinha">Jotinha</option>
+                <option value="jotao">Jotão</option>
+                <option value="caval">Cavalão</option>
+                <option value="superCaval">Super Cavalão</option>
+                <option value="cantBag">Cantoneira Baguetada</option>
+                <option value="dobBox">Dobradiça de Box</option>
+                <option value="dobPort">Dobradiça Portãozinho</option>
+                <option value="u8">U de 8mm</option>
+                <option value="u10">U de 10mm</option>
+                <option value="uGuard">U de Guarda Corpo</option>
+                <option value="parTorreInox">Parafuso Torre de Inox</option>
+                <option value="parInoxTorreInox">Parafuso Inox</option>
+                <option value="torreInox">Torre de Inox</option>
+                <option value="pont15x15">Pontalete 1,¹/² x 1,¹/²</option>
+                <option value="pont2x15">Pontalete 2 x 1,¹/²</option>
+                <option value="ibere">Iberê</option>
+                <option value="guarn39">Guarnição 39</option>
+                <option value="guarn44">Guarnição 44</option>
+                <option value="guarn51">Guarnição 51</option>
+                <option value="puxHquad">Pux H Quadrado</option>
+                <option value="puxHquadCrom">Pux H Quadrado Crom</option>
+                <option value="puxHred">Pux H Redondo</option>
+                <option value="puxHredCrom">Pux H Redondo Crom</option>
+                <option value="pux1m">Pux 1 metro</option>
+                <option value="puxBolaP">Pux Bola Pequeno</option>
+                <option value="puxBolaG">Pux Bola Grande</option>
+                <option value="puxBox">Pux Box</option>
+                <option value="bicoTucP">Bico de Tucano P</option>
+                <option value="bicoTucM">Bico de Tucano M</option>
+                <option value="bicoTucG">Bico de Tucano G</option>
+            </select>
+        </p>
+        <p>
+            <br>
+            <input type="number" name="metro4" id="metro4">
+        </p>
+        <p>
+            <select name="tipoPerfil4" id="tipoPerfil4">
+                <option value="tuboPan">Tubo Panorâmico</option>
+                <option value="tubo1x1">Tubo 1 x 1</option>
+                <option value="tubo15x15">Tubo 1,¹/² x 1,¹/²</option>
+                <option value="tubo2x15">Tubo 2 x 1,¹/²</option>
+                <option value="tubo2x2">Tubo 2 x 2</option>
+                <option value="tubo3x15">Tubo 3 x 1,¹/²</option>
+                <option value="tubo4x2">Tubo 4 x 2</option>
+                <option value="4x4">Tubo 4 x 4</option>
+                <option value="tuboRedondo2">Tubo Redondo 2</option>
+                <option value="tuboRedondo3">Tubo Redondo 3</option>
+                <option value="reg5x5">Régua ¹/² x ¹/²</option>
+                <option value="reg1x5">Régua 1 x ¹/²</option>
+                <option value="reg2x5">Régua 2 x ¹/²</option>
+                <option value="corre28">Corre 28</option>
+                <option value="cant12">Cantoneira 1/2</option>
+                <option value="cant58">Cantoneira 5/8</option>
+                <option value="cant34">Cantoneira 3/4</option>
+                <option value="cant1">Cantoneira 1</option>
+                <option value="jotinha">Jotinha</option>
+                <option value="jotao">Jotão</option>
+                <option value="caval">Cavalão</option>
+                <option value="superCaval">Super Cavalão</option>
+                <option value="cantBag">Cantoneira Baguetada</option>
+                <option value="dobBox">Dobradiça de Box</option>
+                <option value="dobPort">Dobradiça Portãozinho</option>
+                <option value="u8">U de 8mm</option>
+                <option value="u10">U de 10mm</option>
+                <option value="uGuard">U de Guarda Corpo</option>
+                <option value="parTorreInox">Parafuso Torre de Inox</option>
+                <option value="parInoxTorreInox">Parafuso Inox</option>
+                <option value="torreInox">Torre de Inox</option>
+                <option value="pont15x15">Pontalete 1,¹/² x 1,¹/²</option>
+                <option value="pont2x15">Pontalete 2 x 1,¹/²</option>
+                <option value="ibere">Iberê</option>
+                <option value="guarn39">Guarnição 39</option>
+                <option value="guarn44">Guarnição 44</option>
+                <option value="guarn51">Guarnição 51</option>
+                <option value="puxHquad">Pux H Quadrado</option>
+                <option value="puxHquadCrom">Pux H Quadrado Crom</option>
+                <option value="puxHred">Pux H Redondo</option>
+                <option value="puxHredCrom">Pux H Redondo Crom</option>
+                <option value="pux1m">Pux 1 metro</option>
+                <option value="puxBolaP">Pux Bola Pequeno</option>
+                <option value="puxBolaG">Pux Bola Grande</option>
+                <option value="puxBox">Pux Box</option>
+                <option value="bicoTucP">Bico de Tucano P</option>
+                <option value="bicoTucM">Bico de Tucano M</option>
+                <option value="bicoTucG">Bico de Tucano G</option>
+            </select>
+        </p>
+        <p>
+            <br>
+            <input type="number" name="metro5" id="metro5">
+        </p>
+        <p>
+            <select name="tipoPerfil5" id="tipoPerfil5">
+                <option value="tuboPan">Tubo Panorâmico</option>
+                <option value="tubo1x1">Tubo 1 x 1</option>
+                <option value="tubo15x15">Tubo 1,¹/² x 1,¹/²</option>
+                <option value="tubo2x15">Tubo 2 x 1,¹/²</option>
+                <option value="tubo2x2">Tubo 2 x 2</option>
+                <option value="tubo3x15">Tubo 3 x 1,¹/²</option>
+                <option value="tubo4x2">Tubo 4 x 2</option>
+                <option value="4x4">Tubo 4 x 4</option>
+                <option value="tuboRedondo2">Tubo Redondo 2</option>
+                <option value="tuboRedondo3">Tubo Redondo 3</option>
+                <option value="reg5x5">Régua ¹/² x ¹/²</option>
+                <option value="reg1x5">Régua 1 x ¹/²</option>
+                <option value="reg2x5">Régua 2 x ¹/²</option>
+                <option value="corre28">Corre 28</option>
+                <option value="cant12">Cantoneira 1/2</option>
+                <option value="cant58">Cantoneira 5/8</option>
+                <option value="cant34">Cantoneira 3/4</option>
+                <option value="cant1">Cantoneira 1</option>
+                <option value="jotinha">Jotinha</option>
+                <option value="jotao">Jotão</option>
+                <option value="caval">Cavalão</option>
+                <option value="superCaval">Super Cavalão</option>
+                <option value="cantBag">Cantoneira Baguetada</option>
+                <option value="dobBox">Dobradiça de Box</option>
+                <option value="dobPort">Dobradiça Portãozinho</option>
+                <option value="u8">U de 8mm</option>
+                <option value="u10">U de 10mm</option>
+                <option value="uGuard">U de Guarda Corpo</option>
+                <option value="parTorreInox">Parafuso Torre de Inox</option>
+                <option value="parInoxTorreInox">Parafuso Inox</option>
+                <option value="torreInox">Torre de Inox</option>
+                <option value="pont15x15">Pontalete 1,¹/² x 1,¹/²</option>
+                <option value="pont2x15">Pontalete 2 x 1,¹/²</option>
+                <option value="ibere">Iberê</option>
+                <option value="guarn39">Guarnição 39</option>
+                <option value="guarn44">Guarnição 44</option>
+                <option value="guarn51">Guarnição 51</option>
+                <option value="puxHquad">Pux H Quadrado</option>
+                <option value="puxHquadCrom">Pux H Quadrado Crom</option>
+                <option value="puxHred">Pux H Redondo</option>
+                <option value="puxHredCrom">Pux H Redondo Crom</option>
+                <option value="pux1m">Pux 1 metro</option>
+                <option value="puxBolaP">Pux Bola Pequeno</option>
+                <option value="puxBolaG">Pux Bola Grande</option>
+                <option value="puxBox">Pux Box</option>
+                <option value="bicoTucP">Bico de Tucano P</option>
+                <option value="bicoTucM">Bico de Tucano M</option>
+                <option value="bicoTucG">Bico de Tucano G</option>
+            </select>
+        </p>
+        <span id="teste"></span> <br>
+        <input type="submit" value="Confirmar" onclick="somaFinal()" class="confirm">
+        <footer>
+            <a href="../index.html">Fechamento de Caixa</a>
+        </footer>
+    </main>
+</body>
+</html>
