@@ -14,16 +14,16 @@ function precoMetroQuadrado() {
     let cor = getRadioValue('cor');
     let val1 = {
         'color':{
-            'padrao':201, 
-            'eng':236,
-            'box':198,
+            'padrao':198, 
+            'eng':231,
+            'box':195,
             'pia':120,
             'esp':200
         },
         'inc':{
-            'padrao':150,
-            'eng':173,
-            'box':138,
+            'padrao':147,
+            'eng':170,
+            'box':136,
             'pia':120,
             'esp':200
         },
