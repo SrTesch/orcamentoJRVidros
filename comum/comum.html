@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orçamento Vidro Comum</title>
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="comum.css">
+    <script src="comum.js" defer></script>
+</head>
+<body>
+    <main>
+        <p>
+            <input type="number" name="altura" id="altura" placeholder="cm"> x <input type="number" name="largura" id="largura" placeholder="cm"> <input type="number" name="qtdVidros" id="qtdVidros" placeholder="qtd">
+            <br><br>
+        </p>
+        <p>
+            Serviço:
+        </p>
+        <p>
+            <input type="radio" name="serv" value="cInst" id="cInst">
+                <label for="cInst">Com instalação</label>
+            <input type="radio" name="serv" value="sInst" id="sInst">
+                <label for="sInst">Sem instalação</label>
+            <br>
+        </p>
+        <p>
+            Tipo de Vidro: <br>
+            <input type="radio" name="tipoDeVidro" value="canelado" id="canelado">
+                <label for="canelado">Canelado</label>
+            <input type="radio" name="tipoDeVidro" value="incolor" id="incolor" >
+                <label for="incolor">Incolor 3mm</label>
+            <input type="radio" name="tipoDeVidro" value="fume" id="fume" required>
+                <label for="fume">Fumê</label>    
+            <input type="radio" name="tipoDeVidro" value="miniboreal" id="miniboreal" >
+                <label for="miniboreal">Mini Boreal</label>
+            <input type="radio" name="tipoDeVidro" value="esp" id="esp">
+                <label for="esp">Espelho</label>
+            <br>
+        </p>
+        <div id="tipoServ">
+            <p>
+                Tipo de Serviço: <br>
+            </p>
+            <p>
+                <input type="radio" name="tipoDeServ" value="ferro" id="ferro">
+                    <label for="ferro">Ferro</label>
+                <input type="radio" name="tipoDeServ" value="aluminio" id="aluminio" >
+                    <label for="aluminio">Alumínio</label>
+                <input type="radio" name="tipoDeServ" value="madeira" id="madeira" required>
+                    <label for="madeira">Madeira</label>
+                <input type="radio" name="tipoDeServ" value="repferro" id="repferro" >
+                    <label for="repferro">Reposição em Ferro</label>
+                <input type="radio" name="tipoDeServ" value="esp" id="esp">
+                    <label for="esp">Espelho</label>
+                <br>
+            </p>
+        </div>
+        <span id="preco"> </span>
+        <br>
+        <p>
+            <input type="submit" value="Confirmar" class="confirm" id="botao">
+        </p>
+        <br>
+        <span id="naira"></span>
+    </main>
+    <footer>
+        <a href="https://github.com/srTesch" target="_blank">&copy; Te<strong>S</strong>ch</a>
+        <a href="../index.html">Vidro Temperado</a>
+    </footer>
+</body>
+</html>

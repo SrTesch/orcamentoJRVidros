@@ -10,26 +10,38 @@ body{
     padding: 0%;
     background-color: #1c1cbb;
     color: white;
+    background-image: url(../images/fundo.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: center;
+}
+
+main{
+    background-color: white;
+    width: 60%;
+    margin: auto;
+    border-radius: 0px 0px 20px 20px;
 }
 
 #altura{
-    width: 90px;
+    width:12%;
     height: 40px;
     font-size: 24px;
     margin-left: 15px;
 }
 #largura{
-    width: 90px;
+    width:12%;
     height: 40px;
     font-size: 24px;
     margin-left: 4px;
 }
 
-body{
-    background-image: url(images/fundo.jpg);
-    background-size: cover;
-    background-attachment: fixed;
-    text-align: center;
+#qtdVidros{
+    width: 12%;
+    height: 40px;
+    font-size: 24px;
+    float: right;
+    margin-right: 15px;
 }
 
 p{
@@ -63,27 +75,6 @@ span#teste{
     color: white;
 }
 
-main{
-    background-color: white;
-    width: 60%;
-    margin: auto;
-    border-radius: 0px 0px 20px 20px;
-}
-
-select#tipoDeServ{
-    width: 155px;
-    font-size: 0.8em;
-}
-
-#space{
-    margin: 3px;
-}
-
-#qserv{
-    font-size: 0.8em;
-    position: relative;
-}
-
 footer{
     margin-top: 8px;
     text-align: center;
@@ -100,8 +91,4 @@ footer > a{
 footer > a:hover{
     background-color: white;
     color: #223F43;
-}
-
-#proj{
-    margin: 0px 20px;
 }
