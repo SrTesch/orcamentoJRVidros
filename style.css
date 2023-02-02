@@ -42,8 +42,12 @@ p{
     text-align: center;
 }
 
+h1{
+    color: #223F43;
+}
 
-span#teste{
+
+#preco{
     margin-top: 20px;
 }
 
@@ -64,7 +68,8 @@ span#teste{
 }
 
 main{
-    background-color: white;
+    padding-bottom: 15px;
+    background-color: #e8f1f2;
     width: 60%;
     margin: auto;
     border-radius: 0px 0px 20px 20px;
@@ -90,7 +95,7 @@ footer{
     text-align: center;
 }
 
-footer > a{
+a{
     padding: 2px;
     text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.788);
     text-decoration: none;
@@ -98,9 +103,26 @@ footer > a{
     transition-duration: .5s;
 }
 
-footer > a:hover{
+a:hover{
     background-color: white;
     color: #223F43;
+}
+
+nav{
+    margin-top: 15px;
+}
+
+nav > a{
+    font-size: 1.5em;
+    color: #223F43;
+    border-radius: 9px;
+    margin: 0px 10px;
+    border: 2px solid #223F43;
+}
+
+nav > a:hover{
+    background-color: #223F43;
+    color: white;
 }
 
 #proj{

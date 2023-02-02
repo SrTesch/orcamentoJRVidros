@@ -1,102 +1,24 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Orçamento JRVidros</title>
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <title>HomePage</title>
     <link rel="stylesheet" href="style.css">
-    <script src="index.js" defer></script> 
 </head>
 <body>
     <main>
         <p>
-            <!--Aqui a altura e a largura serão definidos pra podermos trabalhar com o valor dos aluminios e vidro-->
-
-            <input type="number" name="altura" id="altura" placeholder="cm"> x <input type="number" name="largura" id="largura" placeholder="cm">
-            <br> 
-            <input type="radio" name="tipoDeMed" value="box" id="box">
-                <label for="box">Box</label>
-            <input type="radio" name="tipoDeMed" value="eng" id="eng" >
-                <label for="eng">Engenharia</label>
-            <input type="radio" name="tipoDeMed" value="padrao" id="padrao" required>
-                <label for="padrao">Padrão</label>    
-            <input type="radio" name="tipoDeMed" value="pia" id="pia" >
-                <label for="pia">Kit Pia</label>
-            <input type="radio" name="tipoDeMed" value="esp" id="esp">
-                <label for="esp">Espelho</label>
-            <br> <br>
-            Cor do vidro: <br>
-            <input type="radio" name="cor" value="inc" id="incolor">
-                <label for="incolor">Incolor</label>
-            <input type="radio" name="cor" value="color" id="color">
-                <label for="color">Colorido</label>
-            <br> <br>
-            <!--Escolhendo o tipo de serviço para definir qual kit de aluminio seria usado-->
-            Serviço: <br>
-            <select name="tipoDeServ" id="tipoDeServ">
-                <option value="j2f">Janela 2 Folhas</option>
-                <option value="j4f">Janela 4 Folhas</option>
-                <option value="p2f">Porta 2 Folhas</option>
-                <option value="p4f">Porta 4 Folhas</option>
-                <option value="piv">Porta Pivotante</option>
-                <option value="pivD">Dupla Pivotante</option>
-                <option value="boxF">Box Frontal</option>
-                <option value="boxC">Box de Canto</option>
-                <option value="bascP">Báscula P</option>
-                <option value="bascG">Báscula G</option>
-                <option value="portaoP">Portãozinho P</option>
-                <option value="portaoG">Portãozinho G</option>
-                <option value="kitPia">Kit Pia</option>
-                <option value="trasVao">Trás do vão</option>
-                <option value="trasVaoE">Trás do vão c est/</option>
-                <option value="trasVaoD">Trás do vão dupla</option>
-                <option value="versJ3">Janela Versatik 3F</option>
-                <option value="versJ6">Janela Versatik 6F</option>
-                <option value="versP3">Porta Versatik 3F</option>
-                <option value="versP6">Porta Versatik 6F</option>
-                <option value="esp">Espelho</option>
-            </select>
-            <br><br>
-            Alumínio: <br>
-            <input type="radio" name="corA" id="branco">
-                <label for="branco">Branco</label>
-            <input type="radio" name="corA" id="preto">
-                <label for="preto">Preto</label> <br> <br>
-            <!--A partir daqui o codigo serve pra calcular a mão de obra-->
-            Qtd serviços: <br>
-            <select name="qserv" id="qserv">
-                <option value="0">1</option>
-                <option value="1">2</option>
-                <option value="2">3</option>
-                <option value="3">4</option>
-                <option value="4">5</option>
-            </select>
-            <br>
-            <br>
-            Vinil: <br>
-            <input type="radio" name="vin" id="sim"><label for="sim">Sim</label><span id="space"></span> <input type="radio" name="vin" id="nao"><label for="nao">Não</label><span id="space"></span>
-            <input type="radio" name="vin" id="est"><label for="est">Sim,c/cant</label>
-            <br>
-            <br>
-            Puxador: <br>
-            <input type="radio" name="pux" id="npux">
-                <label for="npux">Não</label> <span id="space"></span>
-            <input type="radio" name="pux" id="s1"><label for="s1">1</label><span id="space"></span>
-            <input type="radio" name="pux" id="s2"><label for="s2">2</label>
-
-            <span id="teste"> </span>
-            <br>
-            <input type="submit" value="Confirmar" onclick="somaFinal()" class="confirm">
-            <br>
+        <h1>Seja Bem-Vindo ao Sistema da JR Vidros</h1>
         </p>
+        <img src="images/logo.png" alt="Logo JR Vidros">
+        <nav>
+            <a href="temperado/temperado.html">Vidro Temperado</a>
+            <a href="comum/comum.html">Vidro Comum</a>
+            <a href="projects/projects.html" target="_blank">Projetos</a>
+            <a href="fechamento/index.html">Fechamento</a>
+        </nav>
     </main>
-    <footer>
-        <a href="https://github.com/srTesch" target="_blank">&copy; Te<strong>S</strong>ch</a>
-        <a href="comum/comum.html">Vidro Comum</a>
-        <a href="projects/projects.html" target="_blank" id="proj">Projetos</a>
-        <a href="fechamento/index.html">Fechamento de Caixa</a>
-    </footer>
 </body>
 </html>

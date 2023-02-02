@@ -33,8 +33,7 @@ function precoMetroQuadrado() {
 }
 
 function medidaVidro() {
-    let aux1 = document.getElementById('altura')
-    let alt = Number(aux1.value)
+    let alt = Number(document.getElementById('altura').value)
     let serv = document.getElementById('tipoDeServ').value
     if(serv == 'trasVao' || serv == 'trasVaoD' || serv == 'trasVaoE'){ //transpasso na altura da porta de correr por trás do vão
         alt = (alt+5)*0.01
@@ -377,7 +376,7 @@ function puxador() {
 
 function somaFinal() {
     let precoFinal = medidaVidro() + alum() + maoDeObra() + vinil() + puxador()
-    let teste = document.getElementById('teste')
+    let teste = document.getElementById('preco')
     let preçoCartão = precoFinal * 1.125
     let preçoDinheiro = preçoCartão * 0.9
     teste.innerHTML = `<br>10x sem juros: R$${preçoCartão.toFixed(2)} <br> A vista: R$${preçoDinheiro.toFixed(2)}`.replace(".", ",")

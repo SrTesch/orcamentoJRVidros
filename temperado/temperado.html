@@ -4,25 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fechamento JRVidros</title>
+    <title>Orçamento Vidro Temperado</title>
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
-    <script src="index.js"></script> 
+    <link rel="stylesheet" href="../style.css">
+    <script src="temperado.js" defer></script> 
 </head>
 <body>
     <main>
         <p>
-            <input type="number" name="altura" id="altura" placeholder="cm">x
-            <input type="number" name="largura" id="largura" placeholder="cm">
-            <br>
+            <!--Aqui a altura e a largura serão definidos pra podermos trabalhar com o valor dos aluminios e vidro-->
+
+            <input type="number" name="altura" id="altura" placeholder="cm"> x <input type="number" name="largura" id="largura" placeholder="cm">
+            <br> 
             <input type="radio" name="tipoDeMed" value="box" id="box">
-            <label for="box">Box</label>
+                <label for="box">Box</label>
             <input type="radio" name="tipoDeMed" value="eng" id="eng" >
-            <label for="eng">Engenharia</label>
+                <label for="eng">Engenharia</label>
             <input type="radio" name="tipoDeMed" value="padrao" id="padrao" required>
                 <label for="padrao">Padrão</label>    
             <input type="radio" name="tipoDeMed" value="pia" id="pia" >
                 <label for="pia">Kit Pia</label>
+            <input type="radio" name="tipoDeMed" value="esp" id="esp">
+                <label for="esp">Espelho</label>
             <br> <br>
             Cor do vidro: <br>
             <input type="radio" name="cor" value="inc" id="incolor">
@@ -53,41 +56,48 @@
                 <option value="versJ6">Janela Versatik 6F</option>
                 <option value="versP3">Porta Versatik 3F</option>
                 <option value="versP6">Porta Versatik 6F</option>
+                <option value="esp">Espelho</option>
             </select>
-            <br> <br>
-            Cor do alumínio: <br>
-            <input type="radio" name="corA" id="branco" value="branco">
+            <br><br>
+            Alumínio: <br>
+            <input type="radio" name="corA" id="branco">
                 <label for="branco">Branco</label>
-            <input type="radio" name="corA" id="preto" value="preto">
-                <label for="preto">Preto</label><br>
+            <input type="radio" name="corA" id="preto">
+                <label for="preto">Preto</label> <br> <br>
+            <!--A partir daqui o codigo serve pra calcular a mão de obra-->
+            Qtd serviços: <br>
+            <select name="qserv" id="qserv">
+                <option value="0">1</option>
+                <option value="1">2</option>
+                <option value="2">3</option>
+                <option value="3">4</option>
+                <option value="4">5</option>
+            </select>
             <br>
             <br>
-
-            Vinil:<br>
-            <input type="number" name="alturaVinil" id="altVin" placeholder="cm">x<input type="number" name="larguraVinil" id="largVin" placeholder="cm">
+            Vinil: <br>
+            <input type="radio" name="vin" id="sim"><label for="sim">Sim</label><span id="space"></span> <input type="radio" name="vin" id="nao"><label for="nao">Não</label><span id="space"></span>
+            <input type="radio" name="vin" id="est"><label for="est">Sim,c/cant</label>
             <br>
             <br>
-            Neste serviço terá puxador? <br>
+            Puxador: <br>
             <input type="radio" name="pux" id="npux">
-                <label for="npux">Não</label><span id="space"></span>
-            <input type="radio" name="pux" id="s1">
-                <label for="s1">1</label><span id="space"></span>
-            <input type="radio" name="pux" id="s2">
-                <label for="s2">2</label>
-            <br>
-            <br>
+                <label for="npux">Não</label> <span id="space"></span>
+            <input type="radio" name="pux" id="s1"><label for="s1">1</label><span id="space"></span>
+            <input type="radio" name="pux" id="s2"><label for="s2">2</label>
 
-            <span id="teste"> </span>
+            <span id="preco"> </span>
+            <br>
             <input type="submit" value="Confirmar" onclick="somaFinal()" class="confirm">
             <br>
-         </p>
+        </p>
     </main>
     <footer>
         <a href="https://github.com/srTesch" target="_blank">&copy; Te<strong>S</strong>ch</a>
         <a href="../index.html">HomePage</a>
-        <a href="metroLinear/metro.html" id="met">Metro Linear</a>
-        <a href="../temperado/temperado.html">Vidro Temperado</a>
         <a href="../comum/comum.html">Vidro Comum</a>
+        <a href="../projects/projects.html" target="_blank" id="proj">Projetos</a>
+        <a href="../fechamento/index.html">Fechamento de Caixa</a>
     </footer>
 </body>
 </html>

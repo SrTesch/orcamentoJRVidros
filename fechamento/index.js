@@ -14,16 +14,16 @@ function precoMetroQuadrado() {
     let cor = getRadioValue('cor');
     let val1 = {
         'color':{
-            'padrao':198, 
-            'eng':231,
-            'box':195,
+            'padrao':193, 
+            'eng':215,
+            'box':190,
             'pia':120,
             'esp':200
         },
         'inc':{
-            'padrao':147,
-            'eng':170,
-            'box':136,
+            'padrao':142,
+            'eng':163,
+            'box':133,
             'pia':120,
             'esp':200
         },
@@ -49,8 +49,7 @@ function medidaVidro() {
 }
 
 function transp(){
-    let larg = document.getElementById('largura')
-    larg = Number(larg.value)
+    let larg = Number(document.getElementById('largura').value)
     larg *= 0.01 //transformando de metro pra centímetros
     let serv = document.getElementById('tipoDeServ').value
     if(serv == 'j2f' ||serv == 'p2f' || serv == 'boxF' || serv == 'kitPia' || serv == 'trasVao' || serv == 'trasVaoE'){
@@ -65,8 +64,7 @@ function transp(){
 
 function alum() { //calculo do preço dos alumínios
     let serv = document.getElementById('tipoDeServ').value
-    let aux1 = document.getElementById('altura')
-    let alt = Number(aux1.value)
+    let alt = Number(document.getElementById('altura').value)
     let corAlum = document.getElementsByName('corA')
 
     if(serv == 12 || serv == 13){ //transpasso na altura da porta de correr por trás do vão
@@ -190,10 +188,8 @@ function alum() { //calculo do preço dos alumínios
 }
 
 function vinil() {
-    let aux1 = document.getElementById('altVin')
-    let alt = Number(aux1.value)
-    let aux2 = document.getElementById('largVin')
-    let larg = Number(aux2.value)
+    let alt = Number(document.getElementById('altVin').value)
+    let larg = Number(document.getElementById('largVin').value)
     alt *= 0.01
     larg *= 0.01
     precovin = alt *larg * 19;
@@ -202,13 +198,11 @@ function vinil() {
 }
 
 function puxador() {
-    let pux = document.getElementsByName('pux')
-    let puxAux
-    if(pux[0].checked){
-        puxAux = 0
-    }else if(pux[1].checked){
+    let pux = getRadioValue('pux')
+    let puxAux = 0;
+    if(pux === 's1'){
         puxAux = 26
-    }else if(pux[2].checked){
+    }else if(pux === 's2'){
         puxAux = 52
     }
     console.log(`preço do puxador: ${puxAux}`)
