@@ -14,16 +14,16 @@ function precoMetroQuadrado() {
     let cor = getRadioValue('cor');
     let val1 = {
         'color':{
-            'padrao':193, 
-            'eng':215,
-            'box':190,
+            'padrao':160, 
+            'eng':170,
+            'box':150,
             'pia':120,
             'esp':200
         },
         'inc':{
-            'padrao':142,
-            'eng':163,
-            'box':133,
+            'padrao':123,
+            'eng':135,
+            'box':115,
             'pia':120,
             'esp':200
         },
@@ -228,7 +228,7 @@ function maoDeObra(){ //calculo da mão de obra
     let mo;
     let valor = document.getElementById('tipoDeServ').value;
     let qserv = document.getElementById('qserv').value;
-    if(valor == 'j2f' || valor == 'j4f' || valor == 'boxF' || valor == 'piv' || valor == 'kitPia'){
+    if(valor == 'kitPia'){
         if(qserv == 0){ //pensei em colocar um multipliador e depois diminuir no valor maximo, mas as diferenças não são padrões
             mo = 160
         }else if(qserv == 1){
@@ -240,99 +240,101 @@ function maoDeObra(){ //calculo da mão de obra
         }else{
             mo = 110
         }
-    }else if(valor == 'p2f' || valor == 'p4f' || valor == 'boxC' || valor == 'trasVao' || valor == 'trasVaoE'){ 
-        if(qserv == 0){
-            mo = 180;
-        }else if(qserv == 1){
-            mo = 160;
-        }else if(qserv == 2){
-            mo = 140;
-        }else if(qserv == 3){
-            mo = 130;
-        }else{
-            mo = 120;
-        }
-    }else if(valor == 'trasVaoD'){
-        if(qserv == 0){
-            mo = 200;
-        }else if(qserv == 1){
-            mo = 180;
-        }else if(qserv == 2){
-            mo = 160;
-        }else if(qserv == 3){
-            mo = 150;
-        }else{
-            mo = 130;
-        }
-    }else if(valor == 'bascP' || valor == 'bascG'){
-        if(qserv == 0){
-            mo = 80
-        }else if(qserv == 1){
-            mo = 70
-        }else if(qserv == 2){
-            mo = 60
-        }else{
-            mo = 50
-        }
-    }else if(valor == 'portaoP' || valor == 'portaoG'){
-        if(qserv == 0){
-            mo = 120;
-        }else if(qserv == 1){
-            mo = 110;
-        }else if(qserv == 2){
-            mo = 100;
-        }else if(qserv == 3){
-            mo = 90;
-        }else{
-            mo = 80;
-        }
-    }else if(valor == 'pivD'){
-        if(qserv == 0){
-            mo = 220;
-        }else if(qserv == 1){
-            mo = 200;
-        }else if(qserv == 2){
+    }else if(valor == 'j2f' || valor == 'j4f' || valor == 'boxF' || valor == 'piv' ){
+        if(qserv == 0)
             mo = 190;
-        }else if(qserv == 3){
-            mo = 180;
-        }else{
+        else if(qserv == 1)
             mo = 170;
-        }
-    }else if(valor == 'versJ3'){
-        if(qserv == 0){
+        else if(qserv == 2)
+            mo = 140;
+        else if(qserv == 3)
+            mo = 120;
+        else
+            mo = 110;
+    }else if(valor == 'p2f' || valor == 'p4f' || valor == 'boxC' || valor == 'trasVao' ){
+        if(qserv == 0)
             mo = 220;
-        }else if(qserv == 1){
+        else if(qserv == 1)
             mo = 200;
-        }else{
+        else if(qserv == 2)
             mo = 180;
-        }
-    }else if(valor == 'versJ6'){
-        if(qserv == 0){
-            mo = 240;
-        }else if(qserv == 1){
-            mo = 220;
-        }else{
+        else if(qserv == 3)
+            mo = 160;
+        else
+            mo = 140;
+    }else if(valor == 'trasVaoE'){ 
+        if(qserv == 0)
+            mo = 180;
+        else if(qserv == 1)
+            mo = 160;
+        else if(qserv == 2)
+            mo = 140;
+        else if(qserv == 3)
+            mo = 130;
+        else
+            mo = 120;
+        
+    }else if(valor == 'trasVaoD' || valor == 'pivD'){
+        if(qserv == 0)
+            mo = 250;
+        else if(qserv == 1)
+            mo = 230;
+        else if(qserv == 2)
             mo = 200;
-        }
-    }else if(valor == 'versP3'){
-        if(qserv == 0){
-            mo = 260;
-        }else if(qserv == 1){
-            mo = 240;
-        }else{
-            mo = 220;
-        }
-    }else if(valor == 'versP6'){
-        if(qserv == 0){
+        else if(qserv == 3)
+            mo = 180;
+        else
+            mo = 160;
+        
+    }else if(valor == 'bascP' || valor == 'bascG'){
+        if(qserv == 0)
+            mo = 80
+        else if(qserv == 1)
+            mo = 70
+        else if(qserv == 2)
+            mo = 60
+        else
+            mo = 50
+        
+    }else if(valor == 'portaoP' || valor == 'portaoG'){
+        if(qserv == 0)
+            mo = 120;
+        else if(qserv == 1)
+            mo = 110;
+        else if(qserv == 2)
+            mo = 100;
+        else if(qserv == 3)
+            mo = 90;
+        else
+            mo = 80;
+        
+    }else if(valor == 'versJ3' || valor == 'versJ6'){
+        if(qserv == 0)
+            mo = 300;
+        else if(qserv == 1)
             mo = 280;
-        }else if(qserv == 1){
+        else if(qserv == 2)
             mo = 260;
-        }else{
+        else if(qserv == 3)
             mo = 240;
-        }
-    }else if(valor == 'esp'){
+        else
+            mo = 220;
+        
+    }else if(valor == 'versP3' || valor == 'versP6'){
+        if(qserv == 0)
+            mo = 400;
+        else if(qserv == 1)
+            mo = 350;
+        else if(qserv == 2)
+            mo = 320;
+        else if(qserv == 3)
+            mo = 280;
+        else
+            mo = 250;
+        
+    }else if(valor == 'esp')
         mo = 0;
-    }
+    
     console.log(`preço da mão de obra ${mo}`)
     return mo
 }
