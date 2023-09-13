@@ -15,14 +15,14 @@ function precoMetroQuadrado() {
     let val1 = {
         'color':{
             'padrao':176, 
-            'eng':170,
+            'eng':187,
             'box':165,
             'pia':120,
             'esp':200
         },
         'inc':{
             'padrao':136,
-            'eng':135,
+            'eng':149,
             'box':127,
             'pia':120,
             'esp':200

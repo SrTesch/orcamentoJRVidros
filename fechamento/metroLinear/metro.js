@@ -290,29 +290,31 @@ function perfil3(){
         total = metro * 0;
     }else if(perfil == 'guarn51'){
         total = metro * 2.4;
-    }else if(perfil == 'puxHquad'){
-        total = metro * 0;
-    }else if(perfil == 'puxHquadCrom'){
-        total = metro * 0;
-    }else if(perfil == 'puxHred'){
-        total = metro * 0;
-    }else if(perfil == 'puxHredCrom'){
-        total = metro * 0;
-    }else if(perfil == 'pux1m'){
-        total = metro * 0;
-    }else if(perfil == 'puxBolaP'){
-        total = metro * 0;
-    }else if(perfil == 'puxBolaG'){
-        total = metro * 0;
-    }else if(perfil == 'puxBox'){
-        total = metro * 0;
-    }else if(perfil == 'bicoTucP'){
-        total = metro * 0;
-    }else if(perfil == 'bicoTucM'){
-        total = metro * 0;
-    }else if(perfil == 'bicoTucG'){
-        total = metro * 0;
-    }
+    }else
+        total = 0;
+    // else if(perfil == 'puxHquad'){
+    //     total = metro * 0;
+    // }else if(perfil == 'puxHquadCrom'){
+    //     total = metro * 0;
+    // }else if(perfil == 'puxHred'){
+    //     total = metro * 0;
+    // }else if(perfil == 'puxHredCrom'){
+    //     total = metro * 0;
+    // }else if(perfil == 'pux1m'){
+    //     total = metro * 0;
+    // }else if(perfil == 'puxBolaP'){
+    //     total = metro * 0;
+    // }else if(perfil == 'puxBolaG'){
+    //     total = metro * 0;
+    // }else if(perfil == 'puxBox'){
+    //     total = metro * 0;
+    // }else if(perfil == 'bicoTucP'){
+    //     total = metro * 0;
+    // }else if(perfil == 'bicoTucM'){
+    //     total = metro * 0;
+    // }else if(perfil == 'bicoTucG'){
+    //     total = metro * 0;
+    // }
     return total;
 }
 
@@ -340,7 +342,7 @@ function perfil4(){
         total = metro * 77;
     }else if(perfil == 'tuboRed2'){
         total = metro * 17;
-    }else if(perfil == 'reg5x5' || perfil == 'cant12'){
+    }else if(perfil == 'reg5x5' || perfil == 'cant12' || perfil == 'u8'){
         total = metro * 5;
     }else if(perfil == 'reg1x5' || perfil == 'jotinha' || perfil == 'cant1' || perfil == 'dobPort'){
         total = metro * 8;
@@ -362,8 +364,6 @@ function perfil4(){
         total = metro * 14;
     }else if(perfil == 'dobBox'){
         total = metro * 21;
-    }else if(perfil == 'u8'){
-        total = metro * 5;
     }else if(perfil == 'u10'){
         total = metro * 6;
     }else if(perfil == 'uGuard'){

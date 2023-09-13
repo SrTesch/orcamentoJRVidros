@@ -15,14 +15,14 @@ function precoMetroQuadrado() {
     let val1 = {
         'color':{
             'padrao':176, 
-            'eng':170,
+            'eng':187,
             'box':165,
             'pia':120,
             'esp':200
         },
         'inc':{
             'padrao':136,
-            'eng':135,
+            'eng':149,
             'box':127,
             'pia':120,
             'esp':200
@@ -52,13 +52,13 @@ function transp(){
     let larg = Number(document.getElementById('largura').value)
     larg *= 0.01 //transformando de metro pra centímetros
     let serv = document.getElementById('tipoDeServ').value
-    if(serv == 'j2f' ||serv == 'p2f' || serv == 'boxF' || serv == 'kitPia' || serv == 'trasVao' || serv == 'trasVaoE'){
+    if(serv == 'j2f' ||serv == 'p2f' || serv == 'boxF' || serv == 'kitPia' || serv == 'trasVao' || serv == 'trasVaoE')
         larg += 0.05
-    }else if(serv == 'j4f' || serv == 'p4f' || serv == 'boxC' || serv == 'trasVaoD'|| serv == 'versJ3' || serv == 'versP3'){
+    else if(serv == 'j4f' || serv == 'p4f' || serv == 'boxC' || serv == 'trasVaoD'|| serv == 'versJ3' || serv == 'versP3')
         larg += 0.1
-    }else if(serv == 'versJ6' || serv == 'versP6'){
+    else if(serv == 'versJ6' || serv == 'versP6')
         larg += 0.2
-    }
+    
     return larg
 }
 
