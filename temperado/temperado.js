@@ -13,17 +13,17 @@ function precoMetroQuadrado() {
     let tipoDeMed = getRadioValue('tipoDeMed');
     let cor = getRadioValue('cor');
     let val1 = {
-        'color':{
-            'padrao':176, 
-            'eng':187,
-            'box':165,
+        'col':{
+            'padrao':162, 
+            'eng':174,
+            'box':157,
             'pia':120,
             'esp':200
         },
         'inc':{
-            'padrao':136,
-            'eng':149,
-            'box':127,
+            'padrao':127,
+            'eng':138,
+            'box':119,
             'pia':120,
             'esp':200
         },

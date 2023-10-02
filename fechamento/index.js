@@ -9,21 +9,23 @@ function getRadioValue(name){
     return valor;
 }
 
+// esta função pega todos os valores possiveis de metroquadrado separando por cor ou incolor e classificando por tipo de serviço
+
 function precoMetroQuadrado() {
     let tipoDeMed = getRadioValue('tipoDeMed');
     let cor = getRadioValue('cor');
     let val1 = {
-        'color':{
-            'padrao':176, 
-            'eng':187,
-            'box':165,
+        'col':{
+            'padrao':162, 
+            'eng':174,
+            'box':157,
             'pia':120,
             'esp':200
         },
         'inc':{
-            'padrao':136,
-            'eng':149,
-            'box':127,
+            'padrao':127,
+            'eng':138,
+            'box':119,
             'pia':120,
             'esp':200
         },
@@ -188,25 +190,23 @@ function alum() { //calculo do preço dos alumínios
 }
 
 function vinil() {
-    let alt = Number(document.getElementById('altVin').value)
-    let larg = Number(document.getElementById('largVin').value)
-    alt *= 0.01
-    larg *= 0.01
+    let alt = Number(document.getElementById('altVin').value) * 0.01
+    let larg = Number(document.getElementById('largVin').value) * 0.01
     precovin = alt *larg * 19;
     console.log(`preço do vinil: ${precovin}`)
-    return precovin
+    return precovin;
 }
 
 function puxador() {
     let pux = getRadioValue('pux')
-    let puxAux = 0;
     if(pux === 's1'){
-        puxAux = 26
+        console.log(`preço do puxador: 26`)
+        return 26;
     }else if(pux === 's2'){
-        puxAux = 52
+        console.log(`preço do puxador: 52`)
+        return 52;
     }
-    console.log(`preço do puxador: ${puxAux}`)
-    return puxAux
+    return 0;
 }
 
 function somaFinal() {
