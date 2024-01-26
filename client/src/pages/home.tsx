@@ -5,7 +5,7 @@ export default function Home(){
     return (
         <div>
             <p>
-        <h1>Seja Bem-Vindo ao Sistema da JR Vidros</h1>
+        <h1>Seja Bem-Vindo ao sistema da <br /> JR Vidros</h1>
         </p>
         <img src={logo} alt="Logo JR Vidros" />
         <nav>
