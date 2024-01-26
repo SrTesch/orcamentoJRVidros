@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edição</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="edit.js" defer></script>
+</head>
+<body>
+    <main>
+        <h1 style="margin-bottom: 30px;">Bem vindo a tela de edição!</h1>
+        <p>
+            Tipo De Serviço: <br>
+            <select name="tipoServ" id="tipoServ">
+                <option value="pad">Padrão</option>
+                <option value="eng" selected>Engenharia</option>
+                <option value="box">Box</option>
+                <option value="pia">Pia</option>
+                <option value="esp">Espelho</option>
+            </select>
+        </p>
+        <p>
+            Cor do vidro: <br>
+            <select name="cor" id="cor">
+                <option value="col">Colorido</option>
+                <option value="inc">Incolor</option>
+            </select>
+        </p>
+        <p>
+            Preço: <br>
+            <input type="number" id="preco" style="width : 100px;">
+        </p>
+        <br>
+            <input type="submit" value="Confirmar" onclick="enviarValores()" class="confirm">
+        <br>
+    </main>
+</body>
+</html>
