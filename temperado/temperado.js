@@ -1,18 +1,18 @@
-let data;
-async function getValues(){
-    const initReq = "http://localhost:3001";
-    try {
-        const response = await fetch(initReq + "/getAllValues");
-        if (response.ok) {
-            data = await response.json(); // Converte a resposta para JSON
-            console.log(data); // Aqui você pode usar os dados recebidos
-        } else {
-            console.log("Erro na resposta do servidor");
-        }
-    } catch (error) {
-        console.error("Erro na requisição:", error);
-    }
-}
+// let data;
+// async function getValues(){
+//     const initReq = "http://localhost:3001";
+//     try {
+//         const response = await fetch(initReq + "/getAllValues");
+//         if (response.ok) {
+//             data = await response.json(); // Converte a resposta para JSON
+//             console.log(data); // Aqui você pode usar os dados recebidos
+//         } else {
+//             console.log("Erro na resposta do servidor");
+//         }
+//     } catch (error) {
+//         console.error("Erro na requisição:", error);
+//     }
+// }
 
 function getRadioValue(name){
     let valor = 'default'
@@ -26,23 +26,47 @@ function getRadioValue(name){
     return valor;
 }
 
-function precoMetroQuadrado(data) {
+// function precoMetroQuadrado(data) {
+//     let tipoDeMed = getRadioValue('tipoDeMed');
+//     let cor = getRadioValue('cor');
+//     let val1 = {
+//         'col':{
+//             'padrao':data[6].preco, 
+//             'eng':data[2].preco,
+//             'box':data[0].preco,
+//             'pia':data[8].preco,
+//             'esp':data[4].preco
+//         },
+//         'inc':{
+//             'padrao':data[7].preco,
+//             'eng':data[3].preco,
+//             'box':data[1].preco,
+//             'pia':data[9].preco,
+//             'esp':data[5].preco
+//         },
+//         'default':{}    
+//     } 
+//     console
+//     return val1[cor][tipoDeMed]
+// }
+
+function precoMetroQuadrado() {
     let tipoDeMed = getRadioValue('tipoDeMed');
     let cor = getRadioValue('cor');
     let val1 = {
         'col':{
-            'padrao':data[6].preco, 
-            'eng':data[2].preco,
-            'box':data[0].preco,
-            'pia':data[8].preco,
-            'esp':data[4].preco
+            'padrao':162, 
+            'eng':174,
+            'box':157,
+            'pia':120,
+            'esp':200
         },
         'inc':{
-            'padrao':data[7].preco,
-            'eng':data[3].preco,
-            'box':data[1].preco,
-            'pia':data[9].preco,
-            'esp':data[5].preco
+            'padrao':127, 
+            'eng':138,
+            'box':119,
+            'pia':120,
+            'esp':200
         },
         'default':{}    
     } 
@@ -50,16 +74,16 @@ function precoMetroQuadrado(data) {
     return val1[cor][tipoDeMed]
 }
 
-function medidaVidro(data) {
+function medidaVidro() {
     let alt = Number(document.getElementById('altura').value)
     let serv = document.getElementById('tipoDeServ').value
-    if(serv == 'trasVao' || serv == 'trasVaoD' || serv == 'trasVaoE'){ //transpasso na altura da porta de correr por trás do vão
+    if(serv == 'trasVao' || serv == 'trasVaoD' || serv == 'trasVaoE') //transpasso na altura da porta de correr por trás do vão
         alt = (alt+5)*0.01
-    }else {
+    else
         alt *= 0.01
-    }
+    
     let larg = transp()
-    let p = precoMetroQuadrado(data)
+    let p = precoMetroQuadrado()
     precoVidro = alt * larg * p
     console.log(`preço do vidro: ${precoVidro.toFixed(2)}`)
     return precoVidro
@@ -395,7 +419,8 @@ function puxador() {
 }
 
 function somaFinal() {
-    let precoFinal = medidaVidro(data) + alum() + maoDeObra() + vinil() + puxador()
+    console.log("cheguei até aqui");
+    let precoFinal = medidaVidro() + alum() + maoDeObra() + vinil() + puxador()
     let teste = document.getElementById('preco')
     let preçoCartão = precoFinal * 1.125
     let preçoDinheiro = preçoCartão * 0.9
