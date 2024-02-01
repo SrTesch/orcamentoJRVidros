@@ -53,7 +53,7 @@ function getRadioValue(name){
 function precoMetroQuadrado() {
     let tipoDeMed = getRadioValue('tipoDeMed');
     let cor = getRadioValue('cor');
-    let val1 = {
+    const val1 = {
         'col':{
             'padrao':162, 
             'eng':174,
@@ -70,7 +70,7 @@ function precoMetroQuadrado() {
         },
         'default':{}    
     } 
-    console
+
     return val1[cor][tipoDeMed]
 }
 
@@ -271,7 +271,7 @@ function maoDeObra(){ //calculo da mão de obra
     let valor = document.getElementById('tipoDeServ').value;
     let qserv = document.getElementById('qserv').value;
     if(valor == 'kitPia'){
-        if(qserv == 0){ //pensei em colocar um multipliador e depois diminuir no valor maximo, mas as diferenças não são padrões
+        if(qserv == 0){ //pensei em colocar um multiplicador e depois diminuir no valor maximo, mas as diferenças não são padrões
             mo = 160
         }else if(qserv == 1){
             mo = 140

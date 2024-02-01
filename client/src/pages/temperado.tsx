@@ -14,9 +14,63 @@ export default function Temperado() {
     const [Vinil, setVinil] = useState('');
     const [puxador, setPuxador] = useState('');
 
+    const getGlassPrice = () : number =>{
+
+        if(tipo === "espelho")
+            return 200;
+        
+        if(tipo === "pia")
+            return 120;
+
+        if(cor === 'colorido'){
+            if(tipo === 'padrao')
+                return 162;
+            else if (tipo === 'eng')
+                return 174
+            else if (tipo === 'box')
+                return 157
+        }else{
+            if(tipo === 'padrao')
+                return 127;
+            else if (tipo === 'eng')
+                return 138
+            else if (tipo === 'box')
+                return 119
+        }
+        return 0;
+    }
+
+    const precoFinalDoVidro = () =>{
+        let alturaf = altura;
+        if(serviço == 'trasVao' || serviço == 'trasVaoD' || serviço == 'trasVaoE') 
+            alturaf = (altura+5)*0.01
+        else
+            alturaf *= 0.01
+
+        let larg = transpasse();
+
+        let p = getGlassPrice();
+
+        let preçoFinal = alturaf * larg * p;
+        return preçoFinal
+    }
+
+    const transpasse = () =>{
+        let larg = largura;
+        larg *= 0.01 //transformando de metro pra centímetros
+        if(serviço == 'j2f' ||serviço == 'p2f' || serviço == 'boxF' || serviço == 'kitPia' || serviço == 'trasVao' || serviço == 'trasVaoE')
+            larg += 0.05
+        else if(serviço == 'j4f' || serviço == 'p4f' || serviço == 'boxC' || serviço == 'trasVaoD'|| serviço == 'versJ3' || serviço == 'versP3')
+            larg += 0.1
+        else if(serviço == 'versJ6' || serviço == 'versP6')
+            larg += 0.2
+        
+
+        return larg
+    }
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault(); // Evita a recarga da página padrão do formulário
-        console.log("teste");
+        console.log("preço final",precoFinalDoVidro());
     }
     return (
         <div className="budget">
@@ -43,7 +97,7 @@ export default function Temperado() {
                             value="box"
                             id="box"
                             checked={tipo === 'box'}
-                            onChange={e => setTipo(e.target.value)}
+                            onChange={e=>{setTipo(e.target.value)}}
                         />
                         Box
                     </label>
@@ -54,7 +108,7 @@ export default function Temperado() {
                             value="eng"
                             id="eng"
                             checked={tipo === 'eng'}
-                            onChange={e => setTipo(e.target.value)}
+                            onChange={e=>{setTipo(e.target.value)}}
                         />
                         Engenharia
                     </label>
@@ -65,7 +119,7 @@ export default function Temperado() {
                             value="padrao"
                             id="padrao"
                             checked={tipo === 'padrao'}
-                            onChange={e => setTipo(e.target.value)}
+                            onChange={e=>{setTipo(e.target.value)}}
                         />
                         Padrão
                     </label>
@@ -76,7 +130,7 @@ export default function Temperado() {
                             value="pia"
                             id="pia"
                             checked={tipo === 'pia'}
-                            onChange={e => setTipo(e.target.value)}
+                            onChange={e=>{setTipo(e.target.value)}}
                         />
                         Kit Pia
                     </label>
@@ -84,9 +138,9 @@ export default function Temperado() {
                         <input
                             type="radio"
                             name="tipo"
-                            value="esp"
-                            checked={tipo === 'esp'}
-                            onChange={e => setTipo(e.target.value)}
+                            value="espelho"
+                            checked={tipo === 'espelho'}
+                            onChange={e=>{setTipo(e.target.value)}}
                         />
                         Espelho
                     </label>
@@ -99,7 +153,7 @@ export default function Temperado() {
                             name="cor"
                             value="incolor"
                             checked={cor === "incolor"}
-                            onChange={e => setCor(e.target.value)}
+                            onChange={e=>{setCor(e.target.value)}}
                         />
                         Incolor
                     </label>
@@ -108,8 +162,8 @@ export default function Temperado() {
                             type="radio"
                             name="cor"
                             value="colorido"
-                            checked={cor === "colorido"}
-                            onChange={e => setCor(e.target.value)}
+                            checked={cor == "colorido"}
+                            onChange={e=>{setCor(e.target.value)}}
                         />
                         Colorido
                     </label>
@@ -238,6 +292,7 @@ export default function Temperado() {
                 </span>
                 <br />
                 <button className="confirmButton" style={{ marginTop: "10px" }}>Confirmar</button>
+
             </form>
         </div>
     )
