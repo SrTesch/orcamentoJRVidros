@@ -40,38 +40,45 @@ h1{
   flex-direction: row;
   justify-content: center;
   gap: 80px;
-  width: 100%;
-  padding: 0, 40;
+  padding: 0px 40px;
 }
 
 .routes{ /* main*/
   padding-bottom: 15px;
   background-color: #e8f1f2;
+  box-shadow: 2px 2px 2px black;
   width: 100%;
   border-radius: 0px 0px 20px 20px;
   min-width: 350px;
 }
 
 nav{
+  font-size: 1em;
+  font-family: 'Courier New', Courier, monospace;
   background-color: #e8f1f2;
+  box-shadow: 2px 2px 2px black;
   width: 100%;
+  border-radius: 0px 0px 20px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+  min-width: 250px;
+  padding-bottom: 10px;
 }
 
 nav > .buttonsHome{
-  font-size: 1.5em;
-  color: #223F43;
+  text-decoration: none;
+  color: #2E4D50;
   margin: 0px 10px;
-  width: 60%;
+  width: 100%;
 }
 
 nav > .buttonsHome:hover{
-  background-color: #223F43;
+  background-color: #2E4D50;
   color: white;
 }
+
 p{
   font-size: 22px;
   padding: 5px;
@@ -81,25 +88,9 @@ p{
   min-width: 350px;
   text-align: center;
 }
-
-.buttonsHome{
-  padding: 2px;
-  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.788);
-  text-decoration: none;
-  color: white;
-  transition-duration: .5s;
-}
-
-.buttonsHome:hover{
-  background-color: white;
-  color: #223F43;
-}
-
-
-/* nav{
+.item{
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  gap: 5px;
-} */
+  margin-bottom: 10px;
+  gap: 10px;
+}
